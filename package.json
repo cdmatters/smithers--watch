@@ -1,0 +1,14 @@
+{
+  "name": "smithers-watch",
+  "version": "1.0.0",
+  "description": "A repository for watching the Smithers pokerbot tournaments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "condnsdmatters",
+  "license": "ISC",
+  "dependencies": {
+    "deck-of-cards": "^0.1.8"
+  }
+}
