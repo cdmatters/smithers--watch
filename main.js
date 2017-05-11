@@ -1,8 +1,11 @@
 "use strict";
 var $container = document.getElementById('container')
+$container.style.y = -200
 
 var deck = Deck()
 deck.mount($container)
+// deck.translate(0,-100,0)
+// con
 
 function jsonToCard(smithers_card)
 { 
@@ -74,6 +77,7 @@ function get_board_coords()
     for (let i = 0; i < 5; i++)
     {
         coords.push({
+            // from example
             x:  Math.round((i - 2.05) * 70 * fontSize / 16),
             y:  Math.round(-110 * fontSize / 16),
         })
@@ -83,18 +87,38 @@ function get_board_coords()
 
 }
 
-function get_nsided_polygon_vertices(n, x_centre, y_centre, radius)
+function get_nsided_polygon_vertices(n, x_centre, y_centre, radius, start_angle)
 { 
     let vertices = []
-    let angle = 0
     let angle_increment =  Math.PI / (n - 1)
     for (let i = 0; i < n; i++)
     {
         vertices.push({
-            x: x_centre + radius * Math.cos(angle),
-            y: y_centre + radius * Math.sin(angle),
+            x: x_centre + radius * Math.cos(start_angle),
+            y: y_centre + radius * Math.sin(start_angle),
         })
-        angle += angle_increment
+        start_angle += angle_increment
+    }
+    return vertices
+}
+
+function get_nsided_polygon_vertices_ellipse(n, x_centre, y_centre, a, b, start_angle)
+{
+    function get_ellipse_radius(a, b, angle)
+    {
+        return (a*b)/Math.sqrt( Math.pow(a*Math.sin(angle),2) + Math.pow(b*Math.cos(start_angle),2))
+    }
+
+    let vertices = []
+    let angle_increment =  Math.PI / (n - 1)
+    for (let i = 0; i < n; i++)
+    {
+        let radius = get_ellipse_radius(a, b, start_angle)
+        vertices.push({
+            x: x_centre + radius * Math.cos(start_angle),
+            y: y_centre + radius * Math.sin(start_angle),
+        })
+        start_angle += angle_increment
     }
     return vertices
 }
@@ -121,7 +145,8 @@ function move_cards_to_coord(cards, coord)
 
 function deal_hands(message)
 {
-    var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 200)/2 )
+    // var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 200)/2, 0 )
+    var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.87)/2, (window.innerHeight*.87)/2, 0 )
 
     for (var i = 0; i < message.players.length; i++)
     {
@@ -133,15 +158,11 @@ function deal_hands(message)
     }
 }
 
-// function allocate_seats()
-// {
-//     var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 50)/2 )
-
-// }
 
 function allocate_seats(message)
 {
-    var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 30)/2 )
+    // var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 70)/2, -Math.PI*3/40 )
+    var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.90)/2, (window.innerHeight*.90)/2, 0 )
     let players = {}
     for (let i = 0; i < message.players.length; i++ )
     {
