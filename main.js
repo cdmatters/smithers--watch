@@ -13,6 +13,9 @@ function jsonToCard(smithers_card)
     case "A":
         index = 0
         break
+    case "T":
+        index = 9
+        break
     case "J":
         index = 10
         break
@@ -23,7 +26,7 @@ function jsonToCard(smithers_card)
         index = 12
         break
     default:
-        index = parseInt(card[0]) - 1     
+        index = parseInt(card[0]) - 1
     }
 
     switch (card[1])
@@ -34,15 +37,13 @@ function jsonToCard(smithers_card)
     case "h":
         index += (13 * 1)
         break
-    case "d":
+    case "c":
         index += (13 * 2)
         break
-    case "c": 
+    case "d": 
         index += (13 * 3)
         break
     }
-    console.log(index, smithers_card)
-    console.log(deck.cards[index])
     return deck.cards[index]
 }
 
@@ -59,6 +60,27 @@ function displayFile()
     };
     xhttp.open("GET", "./tournaments.json", true);
     xhttp.send(); 
+}
+
+function get_board_coords()
+{
+    let coords = []
+    let y = -230
+    let span = 800
+    let increment = span/5
+
+    let fontSize = window.getComputedStyle(document.body).getPropertyValue('font-size').slice(0, -2)
+
+    for (let i = 0; i < 5; i++)
+    {
+        coords.push({
+            x:  Math.round((i - 2.05) * 70 * fontSize / 16),
+            y:  Math.round(-110 * fontSize / 16),
+        })
+    }
+    console.log(coords)
+    return coords
+
 }
 
 function get_nsided_polygon_vertices(n, x_centre, y_centre, radius)
@@ -81,7 +103,7 @@ function move_cards_to_coord(cards, coord)
 {
     cards.forEach(function (c, i) {
         var card = jsonToCard(c)
-        console.log(card)
+
         var card_sep = 30
         card.setSide('front')
         card.animateTo({
@@ -90,7 +112,7 @@ function move_cards_to_coord(cards, coord)
             ease: 'quartOut',
     
             x: coord.x + card_sep * i,
-            y: coord.y + card_sep * i
+            y: coord.y //+ card_sep * i
         })
     })
 
@@ -100,7 +122,7 @@ function deal_hands(message)
 {
     // var coords = get_seat_coordinates(message.playerslength)
     var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 200)/2 )
-    console.log(coords)
+
     for (var i = 0; i < message.players.length; i++)
     {
         let hand_string =  message.players[i].hand.split("|")
@@ -108,27 +130,61 @@ function deal_hands(message)
         let dealer = hand_string[2]
         console.log(cards)
         move_cards_to_coord(cards, coords[i])
-
-
     }
+}
+
+function deal_board(message)
+{
+    var coords = get_board_coords()
+    console.log(coords)
+    for (var i = 0; i < message.cards.length; i++)
+    {
+        move_cards_to_coord([message.cards[i]], coords[i])
+    }  
+
 }
 
 function process_file(json_tournament)
 {
-    var seat_locations = {}
+    var tournament_players = {}
 
     console.log(json_tournament)
-    for (var i = 0; i < json_tournament.length; i++)
-    {
+    // for (var i = 0; i < json_tournament.length; i++)
+    // {
+    var i = 0 
+    let id = setInterval(function(){
         let item = json_tournament[i]
-        console.log(item.type)
         switch (item.type)
         {
         case "DEALT_HANDS":
             deal_hands(item)
-            return; 
+            break;
+        case "DEALT_BOARD":
+            console.log(item)
+            deal_board(item)
+            break;
+        case "RESULTS":
+            deck.flip()
+            deck.flip()
+            // deck.shuffle()
+            deck.sort(true)
+            // deck = Deck()
+            // deck.mount($container)
+        default:
+            console.log(item)
+
         }
-    }
+        console.log(id)
+        // if (i >= json_tournament.length)
+        if (i >= 400)
+        {
+            clearInterval(id)
+        }
+        i++
+        }, 1000) 
+    // json_tournament.length)
+        
+    // }
 
 
     
