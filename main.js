@@ -104,7 +104,7 @@ function move_cards_to_coord(cards, coord)
     cards.forEach(function (c, i) {
         var card = jsonToCard(c)
 
-        var card_sep = 30
+        var card_sep = 20
         card.setSide('front')
         card.animateTo({
             delay: 500 + i * 2, // wait 1 second + i * 2 ms
@@ -112,15 +112,15 @@ function move_cards_to_coord(cards, coord)
             ease: 'quartOut',
     
             x: coord.x + card_sep * i,
-            y: coord.y //+ card_sep * i
+            y: coord.y + card_sep * i
         })
+
     })
 
 }
 
 function deal_hands(message)
 {
-    // var coords = get_seat_coordinates(message.playerslength)
     var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 200)/2 )
 
     for (var i = 0; i < message.players.length; i++)
@@ -133,6 +133,30 @@ function deal_hands(message)
     }
 }
 
+// function allocate_seats()
+// {
+//     var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 50)/2 )
+
+// }
+
+function allocate_seats(message)
+{
+    var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 30)/2 )
+    let players = {}
+    for (let i = 0; i < message.players.length; i++ )
+    {
+         players[message.players[i].name] = {
+            x: coords[i].x,
+            y: coords[i].y,
+            chips: message.players[i].chips,
+            name: message.players[i].name,
+            in_play: true
+        }
+    }
+    return players
+}
+
+
 function deal_board(message)
 {
     var coords = get_board_coords()
@@ -141,6 +165,41 @@ function deal_board(message)
     {
         move_cards_to_coord([message.cards[i]], coords[i])
     }  
+}
+
+var bubble = document.getElementById("bubble")
+var timeout = false; 
+function show_bubble(message, coord, type)
+{
+   bubble.innerHTML = message
+   bubble.style.left = (coord.x || 50 ) + "px"
+   bubble.style.top = (coord.y || 50 ) + "px"
+   bubble.classList.add("show")
+   clearTimeout(timeout)
+   timeout = setTimeout(function() {
+    bubble.classList.remove("show")
+    bubble.style.left = 0 + "px"
+    bubble.style.top = 0 + "px"
+   }, 1000);
+
+}
+
+function draw_players(players)
+{
+    let container = document.getElementById("container");
+    let p = ""
+    for (p in players)
+    {
+        let p_div = document.createElement('div')
+        container.appendChild(p_div)
+        
+        p_div.id = players[p].name
+        p_div.className = "player"
+        p_div.innerHTML = players[p].name + ":" + players[p].chips
+        p_div.style.left = players[p].x + "px"
+        p_div.style.top = players[p].y + "px"
+
+    }
 
 }
 
@@ -149,13 +208,15 @@ function process_file(json_tournament)
     var tournament_players = {}
 
     console.log(json_tournament)
-    // for (var i = 0; i < json_tournament.length; i++)
-    // {
     var i = 0 
     let id = setInterval(function(){
         let item = json_tournament[i]
         switch (item.type)
         {
+        case "TOURNAMENT_START":
+            tournament_players = allocate_seats(item)
+            draw_players(tournament_players)
+            break;
         case "DEALT_HANDS":
             deal_hands(item)
             break;
@@ -163,49 +224,41 @@ function process_file(json_tournament)
             console.log(item)
             deal_board(item)
             break;
+        case "MOVE":
+        case "BLIND":
+            let chips = (item["move"] != "FOLD") ? item["bet"] : ""
+            let message = item["name"] + " " + item["move"] + " " + chips
+            show_bubble(message, {
+                x:tournament_players[item["name"]].x,
+                y:tournament_players[item["name"]].y
+            })
+
+            console.log(item)
+            break;
         case "RESULTS":
             deck.flip()
             deck.flip()
-            // deck.shuffle()
             deck.sort(true)
-            // deck = Deck()
-            // deck.mount($container)
+            break
         default:
             console.log(item)
 
         }
         console.log(id)
-        // if (i >= json_tournament.length)
-        if (i >= 400)
+        // if (i >= 30)
+        if (i >= json_tournament.length)
         {
             clearInterval(id)
         }
+        
         i++
         }, 1000) 
-    // json_tournament.length)
-        
-    // }
+
 
 
     
 }
 
-displayFile()
+displayFile();
 
-
-
-
-// deck.cards.forEach(function (card, i) {
-//     card.setSide('front')
-
-//     // explode
-//     card.animateTo({
-//         delay: 1000 + i * 2, // wait 1 second + i * 2 ms
-//         duration: 500,
-//         ease: 'quartOut',
-
-//         x: Math.random() * window.innerWidth - window.innerWidth / 2,
-//         y: Math.random() * window.innerHeight - window.innerHeight / 2
-//     })
-// })
 

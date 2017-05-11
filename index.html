@@ -7,7 +7,56 @@
     <link rel="stylesheet" href="./node_modules/deck-of-cards/example/example.css">
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container"><div id="bubble"></div></div>
+    <style type="text/css">
+      #bubble {
+          position: absolute;
+          opacity: 0;
+          z-index: 99;
+          color: #FFFFFF;
+          transform: scale(0,0);
+          transition: top 0s;
+          /*transition: all cubic-bezier(.6,-0.28,.74,.05) 1s;*/
+          transition: left 0s;
+      }
+      #bubble.show 
+      {
+          opacity: 1;
+          color: #020001;
+          transform: scale(1,1);
+      }
+      #bubble.call 
+      {
+          opacity: 1;
+          color: #020001;
+          transform: scale(1,1);
+      }
+      #bubble.raise 
+      {
+          opacity: 1;
+          color: #020001;
+          transform: scale(1,1);
+      }
+      #bubble.fold 
+      {
+          opacity: 1;
+          color: #020001;
+          transform: scale(1,1);
+      }
+      .player
+      {
+          position: absolute;
+          transform: scale(1,1)
+          z-index: 99;
+
+      }
+      .chips
+      {
+          position: absolute;
+          transform: scale(1,1)
+      }
+    </style>
+    
     <script src="main.js"></script>
   </body>
 </html>
