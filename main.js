@@ -179,32 +179,24 @@ function deal_board(message)
     }  
 }
 
-var bubble = document.getElementById("bubble")
-var timeout = false; 
-function show_bubble(message, coord, type)
-{
-   bubble.innerHTML = message
-   bubble.style.left = (coord.x || 50 ) + "px"
-   bubble.style.top = (coord.y || 50 ) + "px"
-   bubble.classList.add("show")
-   clearTimeout(timeout)
-   timeout = setTimeout(function() {
-    bubble.classList.remove("show")
-    bubble.style.left = 0 + "px"
-    bubble.style.top = 0 + "px"
-   }, 1000);
-
-}
-
+var timeout;
 function show_player_move(message, move)
 {
+    console.log(message)
     let player = document.getElementById(message["name"]);
     let bubble = player.childNodes[3]
     bubble.innerHTML = move
+    if (message["move"] != "FOLD")
+    {
+        let bet =  player.childNodes[1]
+        bet.innerHTML = "BET: " + message['bet']     
+    }
+
     bubble.classList.add("show")
     clearTimeout(timeout)
     timeout = setTimeout(function() {
     bubble.classList.remove("show")
+    bubble.classList
    }, 1000);
 
 }
@@ -277,14 +269,16 @@ function process_file(json_tournament)
             deal_board(item)
             break;
         case "MOVE":
-        case "BLIND":
             let chips = (item["move"] != "FOLD") ? item["bet"] : ""
             let message = item["move"].split("_")[0] + " " + chips
-            
             show_player_move(item, message)
-
+            break;
+        case "BLIND":
+            let blind = "BLIND: " + item["bet"]
+            show_player_move(item, blind)
             break;
         case "RESULTS":
+            console.log(message)
             deck.flip()
             deck.flip()
             deck.sort(true)
