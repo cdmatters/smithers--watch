@@ -138,8 +138,9 @@ function deal_hands(message, players)
         let hand_string =  message.players[i].hand.split("|")
         let cards = hand_string[1].split(" ")
         let dealer = hand_string[2]
-        console.log(cards)
         move_cards_to_coord(cards, players[message.players[i].name].coord)
+        console.log(message)
+        adjust_chips(message.players[i])
     }
 }
 
@@ -179,26 +180,53 @@ function deal_board(message)
     }  
 }
 
-var timeout;
-function show_player_move(message, move)
+function adjust_bets(message)
 {
-    console.log(message)
     let player = document.getElementById(message["name"]);
-    let bubble = player.childNodes[3]
-    bubble.innerHTML = move
     if (message["move"] != "FOLD")
     {
         let bet =  player.childNodes[1]
-        bet.innerHTML = "BET: " + message['bet']     
+        bet.innerHTML = "BET: " + message['bet']
     }
+}
 
-    bubble.classList.add("show")
+function adjust_chips(message)
+{
+    let player = document.getElementById(message["name"]);
+    let chips =  player.childNodes[2]
+    chips.innerHTML = message["chips"]
+
+    let bet =  player.childNodes[1]
+    bet.innerHTML = "BET: " + 0
+    
+}
+
+var timeout;
+function show_player_move(message, move)
+{
+    let player = document.getElementById(message["name"])
+    let move_div = player.childNodes[3]
+    move_div.innerHTML = move
+    move_div.classList.add("show")
+
     clearTimeout(timeout)
     timeout = setTimeout(function() {
-    bubble.classList.remove("show")
-    bubble.classList
+    move_div.classList.remove("show")
+    move_div.classList
    }, 1000);
 
+}
+
+function show_winner(message)
+{
+    for (let i = 0; i < message.players.length; i++)
+    {
+        let winner = message.players[i]
+        if (winner["winnings"] > 0)
+        {
+            show_player_move(winner, "WIN: " + winner["winnings"])
+        }
+    }
 }
 
 function draw_players(players)
@@ -239,10 +267,6 @@ function draw_players(players)
 
         bet_div.className = "bet"
         bet_div.innerHTML = "BET: " + 0
-
-
-
-
     }
 
 }
@@ -271,14 +295,17 @@ function process_file(json_tournament)
         case "MOVE":
             let chips = (item["move"] != "FOLD") ? item["bet"] : ""
             let message = item["move"].split("_")[0] + " " + chips
+            adjust_bets(item)
             show_player_move(item, message)
             break;
         case "BLIND":
             let blind = "BLIND: " + item["bet"]
+            adjust_bets(item)
             show_player_move(item, blind)
             break;
         case "RESULTS":
-            console.log(message)
+            console.log(item)
+            show_winner(item)
             deck.flip()
             deck.flip()
             deck.sort(true)
@@ -293,7 +320,7 @@ function process_file(json_tournament)
         }
         
         i++
-        }, 1000) 
+        }, 700) 
 
 
 
