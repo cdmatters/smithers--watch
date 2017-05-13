@@ -146,7 +146,7 @@ function deal_hands(message, players)
 
 function allocate_seats(message)
 {
-    var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.90)/2, (window.innerHeight*.90)/2, 0 )
+    var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.80)/2, (window.innerHeight*.90)/2, 0 )
     let players = {}
     for (let i = 0; i < message.players.length; i++ )
     {
@@ -157,6 +157,10 @@ function allocate_seats(message)
             },
             chips: message.players[i].chips,
             name: message.players[i].name,
+            text_coord: {
+                x: (2*coords[i].x/(window.innerWidth*.8) > .9) ? coords[i].x - 120 : coords[i].x + 70,
+                y: coords[i].y,
+            },
             items : {},
             in_play: true
         }
@@ -195,14 +199,12 @@ function show_bubble(message, coord, type)
 function show_player_move(message, move)
 {
     let player = document.getElementById(message["name"]);
-    let bubble = player.childNodes[0]
+    let bubble = player.childNodes[3]
     bubble.innerHTML = move
     bubble.classList.add("show")
     clearTimeout(timeout)
     timeout = setTimeout(function() {
     bubble.classList.remove("show")
-    bubble.style.left = 0 + "px"
-    bubble.style.top = 0 + "px"
    }, 1000);
 
 }
@@ -220,26 +222,28 @@ function draw_players(players)
         let bet_div = document.createElement('div')
         let move_div = document.createElement('div')
 
-        player_div.appendChild(move_div)
         player_div.appendChild(name_div)
         player_div.appendChild(bet_div)
         player_div.appendChild(chips_div)
+        player_div.appendChild(move_div)
         container.appendChild(player_div)
 
         player_div.id = players[p].name
         player_div.className = "player"
         
-        player_div.style.left = players[p].coord.x + "px"
-        player_div.style.top = players[p].coord.y + "px"
+        player_div.style.left = players[p].text_coord.x + "px"
+        player_div.style.top = players[p].text_coord.y + "px"
         
         move_div.className = "move"
         move_div.innerHTML = "\n"
+
 
         name_div.className = "name"
         name_div.innerHTML = players[p].name 
 
         chips_div.className = "chips"
         chips_div.innerHTML = players[p].chips
+
 
         bet_div.className = "bet"
         bet_div.innerHTML = "BET: " + 0
@@ -257,7 +261,7 @@ function process_file(json_tournament)
 
     console.log(json_tournament)
     var i = 0 
-    let id = setInterval(function(){
+    let id = setInterval(function line(){
         let item = json_tournament[i]
         switch (item.type)
         {
@@ -278,20 +282,17 @@ function process_file(json_tournament)
             let message = item["move"].split("_")[0] + " " + chips
             
             show_player_move(item, message)
-            // show_bubble(message, tournament_players[item["name"]].coord)
 
             break;
         case "RESULTS":
             deck.flip()
             deck.flip()
             deck.sort(true)
-            break
+            break;
         default:
             console.log(item)
 
         }
-        console.log(id)
-        // if (i >= 30)
         if (i >= json_tournament.length)
         {
             clearInterval(id)
