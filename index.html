@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Smithers --watch</title>
-    <script src="./node_modules/deck-of-cards/dist/deck.js"></script>
-    <link rel="stylesheet" href="./node_modules/deck-of-cards/example/example.css">
+    <script src="https://deck-of-cards.js.org/dist/deck.min.js"></script>
+<link rel="stylesheet" href="https://deck-of-cards.js.org/example.css">
+<!--     <script src="./node_modules/deck-of-cards/dist/deck.js"></script>
+    <link rel="stylesheet" href="./node_modules/deck-of-cards/example/example.css"> -->
   </head>
   <body>
     <div id="container"><div id="bubble"></div></div>
@@ -19,10 +21,9 @@
           /*transition: all cubic-bezier(.6,-0.28,.74,.05) 1s;*/
           transition: left 0s;
       }
-      #bubble.show 
+      .show 
       {
           opacity: 1;
-          color: #020001;
           transform: scale(1,1);
       }
       #bubble.call 
@@ -52,7 +53,23 @@
       }
       .chips
       {
-          position: absolute;
+          color: blue;
+          z-index: 99;
+          position: relative;
+          transform: scale(1,1)
+      }
+      .name
+      {
+          color: black;
+          z-index: 99;
+          position: relative;
+          transform: scale(1,1)
+      }
+      .bet
+      {
+          color: black;
+          z-index: 99;
+          position: relative;
           transform: scale(1,1)
       }
       #container

@@ -87,26 +87,11 @@ function get_board_coords()
 
 }
 
-function get_nsided_polygon_vertices(n, x_centre, y_centre, radius, start_angle)
-{ 
-    let vertices = []
-    let angle_increment =  Math.PI / (n - 1)
-    for (let i = 0; i < n; i++)
-    {
-        vertices.push({
-            x: x_centre + radius * Math.cos(start_angle),
-            y: y_centre + radius * Math.sin(start_angle),
-        })
-        start_angle += angle_increment
-    }
-    return vertices
-}
-
 function get_nsided_polygon_vertices_ellipse(n, x_centre, y_centre, a, b, start_angle)
 {
     function get_ellipse_radius(a, b, angle)
-    {
-        return (a*b)/Math.sqrt( Math.pow(a*Math.sin(angle),2) + Math.pow(b*Math.cos(start_angle),2))
+    {   
+        return (a*b)/Math.sqrt(Math.pow(a*Math.sin(angle),2) + Math.pow(b*Math.cos(start_angle),2))
     }
 
     let vertices = []
@@ -143,34 +128,36 @@ function move_cards_to_coord(cards, coord)
 
 }
 
-function deal_hands(message)
+function deal_hands(message, players)
 {
-    // var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 200)/2, 0 )
-    var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.87)/2, (window.innerHeight*.87)/2, 0 )
+    // var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.87)/2, (window.innerHeight*.87)/2, 0 )
 
     for (var i = 0; i < message.players.length; i++)
     {
+        let player = document.getElementById(message.players[i].name)
         let hand_string =  message.players[i].hand.split("|")
         let cards = hand_string[1].split(" ")
         let dealer = hand_string[2]
         console.log(cards)
-        move_cards_to_coord(cards, coords[i])
+        move_cards_to_coord(cards, players[message.players[i].name].coord)
     }
 }
 
 
 function allocate_seats(message)
 {
-    // var coords = get_nsided_polygon_vertices(message.players.length, 0, 0, (window.innerHeight - 70)/2, -Math.PI*3/40 )
     var coords = get_nsided_polygon_vertices_ellipse(message.players.length, 0, 0, (window.innerWidth*.90)/2, (window.innerHeight*.90)/2, 0 )
     let players = {}
     for (let i = 0; i < message.players.length; i++ )
     {
          players[message.players[i].name] = {
-            x: coords[i].x,
-            y: coords[i].y,
+            coord: {
+                x: coords[i].x,
+                y: coords[i].y,
+            },
             chips: message.players[i].chips,
             name: message.players[i].name,
+            items : {},
             in_play: true
         }
     }
@@ -205,20 +192,60 @@ function show_bubble(message, coord, type)
 
 }
 
+function show_player_move(message, move)
+{
+    let player = document.getElementById(message["name"]);
+    let bubble = player.childNodes[0]
+    bubble.innerHTML = move
+    bubble.classList.add("show")
+    clearTimeout(timeout)
+    timeout = setTimeout(function() {
+    bubble.classList.remove("show")
+    bubble.style.left = 0 + "px"
+    bubble.style.top = 0 + "px"
+   }, 1000);
+
+}
+
 function draw_players(players)
 {
     let container = document.getElementById("container");
     let p = ""
     for (p in players)
     {
-        let p_div = document.createElement('div')
-        container.appendChild(p_div)
+        let player_div = document.createElement('div')
+
+        let name_div = document.createElement('div')
+        let chips_div = document.createElement('div')
+        let bet_div = document.createElement('div')
+        let move_div = document.createElement('div')
+
+        player_div.appendChild(move_div)
+        player_div.appendChild(name_div)
+        player_div.appendChild(bet_div)
+        player_div.appendChild(chips_div)
+        container.appendChild(player_div)
+
+        player_div.id = players[p].name
+        player_div.className = "player"
         
-        p_div.id = players[p].name
-        p_div.className = "player"
-        p_div.innerHTML = players[p].name + ":" + players[p].chips
-        p_div.style.left = players[p].x + "px"
-        p_div.style.top = players[p].y + "px"
+        player_div.style.left = players[p].coord.x + "px"
+        player_div.style.top = players[p].coord.y + "px"
+        
+        move_div.className = "move"
+        move_div.innerHTML = "\n"
+
+        name_div.className = "name"
+        name_div.innerHTML = players[p].name 
+
+        chips_div.className = "chips"
+        chips_div.innerHTML = players[p].chips
+
+        bet_div.className = "bet"
+        bet_div.innerHTML = "BET: " + 0
+
+
+
 
     }
 
@@ -239,7 +266,7 @@ function process_file(json_tournament)
             draw_players(tournament_players)
             break;
         case "DEALT_HANDS":
-            deal_hands(item)
+            deal_hands(item, tournament_players)
             break;
         case "DEALT_BOARD":
             console.log(item)
@@ -248,13 +275,11 @@ function process_file(json_tournament)
         case "MOVE":
         case "BLIND":
             let chips = (item["move"] != "FOLD") ? item["bet"] : ""
-            let message = item["name"] + " " + item["move"] + " " + chips
-            show_bubble(message, {
-                x:tournament_players[item["name"]].x,
-                y:tournament_players[item["name"]].y
-            })
+            let message = item["move"].split("_")[0] + " " + chips
+            
+            show_player_move(item, message)
+            // show_bubble(message, tournament_players[item["name"]].coord)
 
-            console.log(item)
             break;
         case "RESULTS":
             deck.flip()
