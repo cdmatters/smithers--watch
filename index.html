@@ -9,6 +9,7 @@
     </script>
   </head>
   <body>
+    <p class=flash>WORK IN PROGRESS</p>
     <div id="container"><div id="bubble"></div></div>
     <style type="text/css">
       #bubble {
@@ -78,7 +79,7 @@
           z-index: 99;
           position: absolute;
           transform: scale(1,1);
-          transition: all cubic-bezier(.6,-0.28,.74,.05) 1s;
+          transition: all cubic-bezier(.6,-0.28,.74,.05) 0.2s;
 
       }
       #container
@@ -86,6 +87,20 @@
           top: calc(37% + 1.5rem);
 
       }
+      .flash {
+        color:white;
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    }
+
+@keyframes flash {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
     </style>
     
