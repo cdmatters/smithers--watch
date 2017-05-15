@@ -310,7 +310,12 @@ function draw_players(players)
 
 }
 
-
+var pause = false;
+function pause_play(){
+    pause = !pause
+    document.getElementById("pauseplay").innerHTML = (pause)?"PLAY":"PAUSE"
+    console.log(pause)
+}
 
 function process_file(json_tournament)
 {
@@ -320,7 +325,7 @@ function process_file(json_tournament)
     var i = 0 
     let id = setInterval(function line(){
         let item = json_tournament[i]
-        switch (item.type)
+        switch (pause || item.type)
         {
         case "TOURNAMENT_START":
             tournament_players = allocate_seats(item)
@@ -374,7 +379,11 @@ function process_file(json_tournament)
             clearInterval(id)
         }
         
-        i++
+        if (!pause)
+        {
+            i++
+        }
+
         }, 750) 
 
 
