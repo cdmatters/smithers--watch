@@ -139,7 +139,7 @@ function deal_hands(message, players)
         let cards = hand_string[1].split(" ")
         let dealer = hand_string[2]
         move_cards_to_coord(cards, players[message.players[i].name].coord)
-        console.log(message)
+
         adjust_chips(message.players[i])
         adjust_bets(message.players[i])
         show_player_move(message.players[i], "")
@@ -187,7 +187,6 @@ function allocate_seats(message)
 function deal_board(message)
 {
     var coords = get_board_coords()
-    console.log(coords)
     for (var i = 0; i < message.cards.length; i++)
     {
         move_cards_to_coord([message.cards[i]], coords[i])
@@ -237,7 +236,7 @@ function show_winner(message)
     for (let i = 0; i < message.players.length; i++)
     {
         let winner = message.players[i]
-        if (winner["winnings"] > 0)
+        if (winner["winnings"] >= 0)
         {
             show_player_move(winner, "WIN: " + winner["winnings"])
         }
@@ -325,6 +324,11 @@ function process_file(json_tournament)
     var i = 0 
     let id = setInterval(function line(){
         let item = json_tournament[i]
+        if (!pause)
+        {
+            console.log(i, item)
+        }
+        
         switch (pause || item.type)
         {
         case "TOURNAMENT_START":
@@ -335,7 +339,6 @@ function process_file(json_tournament)
             deal_hands(item, tournament_players)
             break;
         case "DEALT_BOARD":
-            console.log(item)
             deal_board(item)
             clear_moves_if_not_folded(tournament_players)
             break;
@@ -355,14 +358,12 @@ function process_file(json_tournament)
             show_player_move(item, blind)
             break;
         case "BROKE":
-            console.log(item)
             show_bust(item)
             break;
         case "WINNER":
             show_tournament_winner(item)
             break;
         case "RESULTS":
-            console.log(item)
             show_winner(item)
             deck.flip()
             deck.flip()
@@ -370,9 +371,13 @@ function process_file(json_tournament)
             break;
         case "SHUTDOWN":
             break;
+        case "MOVE_REQUEST":
+            break;
         default:
-            console.log(item)
-
+            if (!pause)
+            {
+                console.log("case not covered")
+            }
         }
         if (i >= json_tournament.length)
         {
