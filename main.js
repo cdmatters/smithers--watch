@@ -141,9 +141,23 @@ function deal_hands(message, players)
         move_cards_to_coord(cards, players[message.players[i].name].coord)
         console.log(message)
         adjust_chips(message.players[i])
+        adjust_bets(message.players[i])
+        show_player_move(message.players[i], "")
     }
 }
 
+function clear_moves_if_not_folded(tournament_players)
+{
+    for (let name in tournament_players)
+    {
+        let player = document.getElementById(name)
+        if (player.childNodes[3].innerHTML != "FOLD ")
+        {
+            player.childNodes[3].innerHTML = ""
+        }
+    }
+
+}
 
 function allocate_seats(message)
 {
@@ -186,7 +200,7 @@ function adjust_bets(message)
     if (message["move"] != "FOLD")
     {
         let bet =  player.childNodes[1]
-        bet.innerHTML = "BET: " + message['bet']
+        bet.innerHTML = "BET: " + ( message.bet || "0" )
     }
 }
 
@@ -194,26 +208,27 @@ function adjust_chips(message)
 {
     let player = document.getElementById(message["name"]);
     let chips =  player.childNodes[2]
-    chips.innerHTML = message["chips"]
+    chips.innerHTML = message["chips"] || 0
 
     let bet =  player.childNodes[1]
     bet.innerHTML = "BET: " + 0
     
 }
 
-var timeout;
+var timeouts = {};
 function show_player_move(message, move)
 {
     let player = document.getElementById(message["name"])
     let move_div = player.childNodes[3]
     move_div.innerHTML = move
     move_div.classList.add("show")
+    // move_div.style.opacity = 1
 
-    clearTimeout(timeout)
-    timeout = setTimeout(function() {
+    clearTimeout(timeouts["name"])
+    timeouts["name"] = setTimeout(function() {
     move_div.classList.remove("show")
-    move_div.classList
-   }, 1000);
+    // move_div.style.opacity = 0 
+   }, 750);
 
 }
 
@@ -227,6 +242,30 @@ function show_winner(message)
             show_player_move(winner, "WIN: " + winner["winnings"])
         }
     }
+}
+
+function show_bust(message)
+{
+    for (let i = 0; i < message["names"].length ; i++)
+    {
+        let player = {
+            "name":message["names"][i],
+            "chips":0
+        }
+        show_player_move(player, "BUST")
+        adjust_chips(player)
+    }
+}
+
+function show_tournament_winner(message)
+{
+
+    let player = {
+        "name":message["name"],
+        "chips":message["winnings"]
+    }
+        show_player_move(player, "WINNER: " + message["winnings"])
+        adjust_chips(player)
 }
 
 function draw_players(players)
@@ -271,6 +310,8 @@ function draw_players(players)
 
 }
 
+
+
 function process_file(json_tournament)
 {
     var tournament_players = {}
@@ -291,10 +332,15 @@ function process_file(json_tournament)
         case "DEALT_BOARD":
             console.log(item)
             deal_board(item)
+            clear_moves_if_not_folded(tournament_players)
             break;
         case "MOVE":
             let chips = (item["move"] != "FOLD") ? item["bet"] : ""
             let message = item["move"].split("_")[0] + " " + chips
+            if (message == "CALL 0")
+            {
+                message = "CHECK"
+            }
             adjust_bets(item)
             show_player_move(item, message)
             break;
@@ -303,12 +349,21 @@ function process_file(json_tournament)
             adjust_bets(item)
             show_player_move(item, blind)
             break;
+        case "BROKE":
+            console.log(item)
+            show_bust(item)
+            break;
+        case "WINNER":
+            show_tournament_winner(item)
+            break;
         case "RESULTS":
             console.log(item)
             show_winner(item)
             deck.flip()
             deck.flip()
             deck.sort(true)
+            break;
+        case "SHUTDOWN":
             break;
         default:
             console.log(item)
@@ -320,7 +375,7 @@ function process_file(json_tournament)
         }
         
         i++
-        }, 700) 
+        }, 750) 
 
 
 
