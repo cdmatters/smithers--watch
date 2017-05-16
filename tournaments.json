@@ -1,18 +1,15 @@
 [
 {"listeners":"ok"} ,
-{"listeners":"ok"} ,
-{"listeners":"ok"} ,
-{"listeners":"ok"} ,
 {
 	"players" : 
 	[
 		{
 			"chips" : 3000,
-			"name" : "RANDOM0"
+			"name" : "RANDOM1"
 		},
 		{
 			"chips" : 3000,
-			"name" : "RANDOM1"
+			"name" : "RANDOM0"
 		},
 		{
 			"chips" : 3000,
@@ -34,28 +31,28 @@
 	[
 		{
 			"chips" : 3000,
-			"hand" : "|Ac 4h|0",
-			"name" : "RANDOM1"
+			"hand" : "|Qc 9h|0",
+			"name" : "RANDOM0"
 		},
 		{
 			"chips" : 3000,
-			"hand" : "|2h As|0",
+			"hand" : "|Ts 7c|0",
 			"name" : "RANDOM2"
 		},
 		{
 			"chips" : 3000,
-			"hand" : "|Ks Td|0",
+			"hand" : "|Kd 7s|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
 			"chips" : 3000,
-			"hand" : "|Qc Ts|0",
+			"hand" : "|Js Kc|0",
 			"name" : "RANDOM3"
 		},
 		{
 			"chips" : 3000,
-			"hand" : "|9d Th|1",
-			"name" : "RANDOM0"
+			"hand" : "|3c Ac|1",
+			"name" : "RANDOM1"
 		}
 	],
 	"pot" : 0,
@@ -65,7 +62,7 @@
 	"bet" : 50,
 	"chips" : 2950,
 	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
+	"name" : "RANDOM0",
 	"type" : "BLIND"
 } ,
 {
@@ -101,9 +98,9 @@
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 3000,
-	"move" : "FOLD",
+	"bet" : 100,
+	"chips" : 2900,
+	"move" : "CALL",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
@@ -111,8 +108,8 @@
 	"call" : 100,
 	"chips" : 3000,
 	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 250,
+	"name" : "RANDOM1",
+	"pot" : 350,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
@@ -120,23 +117,23 @@
 	"bet" : 0,
 	"chips" : 3000,
 	"move" : "FOLD",
-	"name" : "RANDOM0",
+	"name" : "RANDOM1",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
 	"chips" : 2950,
 	"current_bet" : 50,
-	"name" : "RANDOM1",
-	"pot" : 250,
+	"name" : "RANDOM0",
+	"pot" : 350,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 2950,
-	"move" : "FOLD",
-	"name" : "RANDOM1",
+	"bet" : 100,
+	"chips" : 2900,
+	"move" : "CALL",
+	"name" : "RANDOM0",
 	"type" : "MOVE"
 } ,
 {
@@ -144,7 +141,7 @@
 	"chips" : 2900,
 	"current_bet" : 100,
 	"name" : "RANDOM2",
-	"pot" : 250,
+	"pot" : 400,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
@@ -158,43 +155,91 @@
 {
 	"cards" : 
 	[
-		"Kd",
-		"4s",
-		"5d"
+		"Ks",
+		"5c",
+		"Jd"
 	],
-	"pot" : 250,
+	"pot" : 400,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 2900,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 400,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2900,
+	"move" : "FOLD",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 2900,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 400,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2800,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2900,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 500,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2900,
+	"move" : "FOLD",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Ks",
+		"5c",
+		"Jd",
+		"2d"
+	],
+	"pot" : 500,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"cards" : 
 	[
-		"Kd",
-		"4s",
-		"5d",
-		"4d"
-	],
-	"pot" : 250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Kd",
-		"4s",
-		"5d",
-		"4d",
+		"Ks",
+		"5c",
+		"Jd",
+		"2d",
 		"6s"
 	],
-	"pot" : 250,
+	"pot" : 500,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"players" : 
 	[
 		{
-			"hand" : "4d 4s Td Ks Kd",
+			"hand" : "6s 7s Jd Kd Ks",
 			"name" : "BASIC_ODDS",
-			"winnings" : 250
+			"winnings" : 500
 		}
 	],
 	"type" : "RESULTS"
@@ -207,28 +252,28 @@
 	[
 		{
 			"chips" : 2900,
-			"hand" : "|5d 5s|0",
+			"hand" : "|Kc Th|0",
 			"name" : "RANDOM2"
 		},
 		{
-			"chips" : 3150,
-			"hand" : "|3c 4c|0",
+			"chips" : 3300,
+			"hand" : "|Jc Qd|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
-			"chips" : 3000,
-			"hand" : "|Jh Ac|0",
+			"chips" : 2900,
+			"hand" : "|7h 2c|0",
 			"name" : "RANDOM3"
 		},
 		{
 			"chips" : 3000,
-			"hand" : "|3h 2d|0",
-			"name" : "RANDOM0"
+			"hand" : "|3h Qc|0",
+			"name" : "RANDOM1"
 		},
 		{
-			"chips" : 2950,
-			"hand" : "|6c 8s|1",
-			"name" : "RANDOM1"
+			"chips" : 2900,
+			"hand" : "|3s As|1",
+			"name" : "RANDOM0"
 		}
 	],
 	"pot" : 0,
@@ -243,14 +288,14 @@
 } ,
 {
 	"bet" : 100,
-	"chips" : 3050,
+	"chips" : 3200,
 	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
 	"type" : "BLIND"
 } ,
 {
 	"call" : 100,
-	"chips" : 3000,
+	"chips" : 2900,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
 	"pot" : 150,
@@ -259,7 +304,7 @@
 } ,
 {
 	"bet" : 100,
-	"chips" : 2900,
+	"chips" : 2800,
 	"move" : "CALL",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
@@ -268,6 +313,22 @@
 	"call" : 100,
 	"chips" : 3000,
 	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 250,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3000,
+	"move" : "FOLD",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2900,
+	"current_bet" : 0,
 	"name" : "RANDOM0",
 	"pot" : 250,
 	"raise" : 200,
@@ -275,25 +336,9 @@
 } ,
 {
 	"bet" : 100,
-	"chips" : 2900,
+	"chips" : 2800,
 	"move" : "CALL",
 	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2950,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 350,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2850,
-	"move" : "CALL",
-	"name" : "RANDOM1",
 	"type" : "MOVE"
 } ,
 {
@@ -301,29 +346,29 @@
 	"chips" : 2850,
 	"current_bet" : 50,
 	"name" : "RANDOM2",
-	"pot" : 450,
+	"pot" : 350,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 2850,
-	"move" : "FOLD",
+	"bet" : 100,
+	"chips" : 2800,
+	"move" : "CALL",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 3050,
+	"chips" : 3200,
 	"current_bet" : 100,
 	"name" : "BASIC_ODDS",
-	"pot" : 450,
+	"pot" : 400,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 3050,
+	"chips" : 3200,
 	"move" : "CALL",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
@@ -331,192 +376,208 @@
 {
 	"cards" : 
 	[
-		"Ad",
-		"7h",
-		"5c"
+		"7d",
+		"3c",
+		"9d"
 	],
-	"pot" : 450,
+	"pot" : 400,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"call" : 0,
-	"chips" : 3050,
+	"chips" : 2800,
 	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3050,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2850,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2850,
-	"move" : "FOLD",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Ad",
-		"7h",
-		"5c",
-		"Ah"
-	],
-	"pot" : 450,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 3050,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3050,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 450,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Ad",
-		"7h",
-		"5c",
-		"Ah",
-		"2s"
-	],
-	"pot" : 450,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 3050,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 450,
+	"name" : "RANDOM2",
+	"pot" : 400,
 	"raise" : 100,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2950,
+	"chips" : 2700,
 	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 3200,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 500,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3200,
+	"move" : "FOLD",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2900,
+	"chips" : 2800,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
-	"pot" : 550,
+	"pot" : 500,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 100,
+	"bet" : 0,
 	"chips" : 2800,
-	"move" : "CALL",
+	"move" : "FOLD",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2900,
+	"chips" : 2800,
 	"current_bet" : 0,
 	"name" : "RANDOM0",
-	"pot" : 650,
+	"pot" : 500,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2800,
+	"chips" : 2700,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"7d",
+		"3c",
+		"9d",
+		"Kh"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 2700,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 600,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2700,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 2700,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 600,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2600,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2700,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 700,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2600,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"7d",
+		"3c",
+		"9d",
+		"Kh",
+		"8s"
+	],
+	"pot" : 800,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 2600,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 800,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2500,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2600,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 900,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 2400,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 2500,
+	"current_bet" : 100,
+	"name" : "RANDOM2",
+	"pot" : 1100,
+	"raise" : 300,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 2300,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 300,
+	"chips" : 2400,
+	"current_bet" : 200,
+	"name" : "RANDOM0",
+	"pot" : 1300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 2300,
 	"move" : "CALL",
 	"name" : "RANDOM0",
 	"type" : "MOVE"
@@ -525,18 +586,13 @@
 	"players" : 
 	[
 		{
-			"hand" : "7h Jh Ac Ah Ad",
-			"name" : "RANDOM3",
-			"winnings" : 750
+			"hand" : "8s 9d Th Kc Kh",
+			"name" : "RANDOM2",
+			"winnings" : 1400
 		},
 		{
-			"hand" : "2d 2s 7h Ah Ad",
+			"hand" : "3s 3c 9d Kh As",
 			"name" : "RANDOM0",
-			"winnings" : 0
-		},
-		{
-			"hand" : "4c 5c 7h Ah Ad",
-			"name" : "BASIC_ODDS",
 			"winnings" : 0
 		}
 	],
@@ -549,28 +605,28 @@
 	"players" : 
 	[
 		{
-			"chips" : 2950,
-			"hand" : "|Tc 5c|0",
+			"chips" : 3200,
+			"hand" : "|Th 8c|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
-			"chips" : 3550,
-			"hand" : "|Qh Kd|0",
+			"chips" : 2800,
+			"hand" : "|9s 6h|0",
 			"name" : "RANDOM3"
 		},
 		{
-			"chips" : 2800,
-			"hand" : "|6h 3h|0",
-			"name" : "RANDOM0"
-		},
-		{
-			"chips" : 2850,
-			"hand" : "|5h 3s|0",
+			"chips" : 3000,
+			"hand" : "|9c 4h|0",
 			"name" : "RANDOM1"
 		},
 		{
-			"chips" : 2850,
-			"hand" : "|Ad Ts|1",
+			"chips" : 2300,
+			"hand" : "|Tc 5c|0",
+			"name" : "RANDOM0"
+		},
+		{
+			"chips" : 3700,
+			"hand" : "|Ac Ah|1",
 			"name" : "RANDOM2"
 		}
 	],
@@ -579,53 +635,53 @@
 } ,
 {
 	"bet" : 50,
-	"chips" : 2900,
+	"chips" : 3150,
 	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
 	"type" : "BLIND"
 } ,
 {
 	"bet" : 100,
-	"chips" : 3450,
+	"chips" : 2700,
 	"move" : "RAISE_TO",
 	"name" : "RANDOM3",
 	"type" : "BLIND"
 } ,
 {
 	"call" : 100,
-	"chips" : 2800,
+	"chips" : 3000,
 	"current_bet" : 0,
-	"name" : "RANDOM0",
+	"name" : "RANDOM1",
 	"pot" : 150,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 0,
-	"chips" : 2800,
+	"chips" : 3000,
 	"move" : "FOLD",
-	"name" : "RANDOM0",
+	"name" : "RANDOM1",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2850,
+	"chips" : 2300,
 	"current_bet" : 0,
-	"name" : "RANDOM1",
+	"name" : "RANDOM0",
 	"pot" : 150,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2750,
+	"chips" : 2200,
 	"move" : "CALL",
-	"name" : "RANDOM1",
+	"name" : "RANDOM0",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2850,
+	"chips" : 3700,
 	"current_bet" : 0,
 	"name" : "RANDOM2",
 	"pot" : 250,
@@ -633,130 +689,114 @@
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 200,
-	"chips" : 2650,
-	"move" : "RAISE_TO",
+	"bet" : 100,
+	"chips" : 3600,
+	"move" : "CALL",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
-	"call" : 200,
-	"chips" : 2900,
+	"call" : 100,
+	"chips" : 3150,
 	"current_bet" : 50,
 	"name" : "BASIC_ODDS",
-	"pot" : 450,
-	"raise" : 300,
+	"pot" : 350,
+	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "FOLD",
+	"bet" : 100,
+	"chips" : 3100,
+	"move" : "CALL",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
-	"call" : 200,
-	"chips" : 3450,
+	"call" : 100,
+	"chips" : 2700,
 	"current_bet" : 100,
 	"name" : "RANDOM3",
-	"pot" : 450,
-	"raise" : 300,
+	"pot" : 400,
+	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 300,
-	"chips" : 3250,
-	"move" : "RAISE_TO",
+	"bet" : 100,
+	"chips" : 2700,
+	"move" : "CALL",
 	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 300,
-	"chips" : 2750,
-	"current_bet" : 100,
-	"name" : "RANDOM1",
-	"pot" : 650,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 300,
-	"chips" : 2550,
-	"move" : "CALL",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 300,
-	"chips" : 2650,
-	"current_bet" : 200,
-	"name" : "RANDOM2",
-	"pot" : 850,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 300,
-	"chips" : 2550,
-	"move" : "CALL",
-	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"6s",
-		"5s",
-		"Jd"
+		"9d",
+		"2d",
+		"Ts"
 	],
-	"pot" : 950,
+	"pot" : 400,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"call" : 0,
-	"chips" : 3250,
+	"chips" : 3100,
 	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 950,
+	"name" : "BASIC_ODDS",
+	"pot" : 400,
 	"raise" : 100,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 3150,
+	"chips" : 3000,
 	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
+	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2550,
+	"chips" : 2700,
 	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 1050,
+	"name" : "RANDOM3",
+	"pot" : 500,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2450,
+	"chips" : 2600,
 	"move" : "CALL",
-	"name" : "RANDOM1",
+	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 2550,
+	"chips" : 2200,
 	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1150,
+	"name" : "RANDOM0",
+	"pot" : 600,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 0,
-	"chips" : 2550,
+	"chips" : 2200,
+	"move" : "FOLD",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 3600,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 600,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3600,
 	"move" : "FOLD",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
@@ -764,58 +804,42 @@
 {
 	"cards" : 
 	[
-		"6s",
-		"5s",
-		"Jd",
-		"Qs"
+		"9d",
+		"2d",
+		"Ts",
+		"Kc"
 	],
-	"pot" : 1150,
+	"pot" : 600,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"call" : 0,
-	"chips" : 3150,
+	"chips" : 3000,
 	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1150,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3150,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2450,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 1150,
+	"name" : "BASIC_ODDS",
+	"pot" : 600,
 	"raise" : 100,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2350,
+	"chips" : 2900,
 	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
+	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 3150,
+	"chips" : 2600,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
-	"pot" : 1250,
+	"pot" : 700,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 3050,
+	"chips" : 2500,
 	"move" : "CALL",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
@@ -823,59 +847,75 @@
 {
 	"cards" : 
 	[
-		"6s",
-		"5s",
-		"Jd",
-		"Qs",
-		"Jh"
+		"9d",
+		"2d",
+		"Ts",
+		"Kc",
+		"7h"
 	],
-	"pot" : 1350,
+	"pot" : 800,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"call" : 0,
-	"chips" : 3050,
+	"chips" : 2900,
 	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1350,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3050,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2350,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 1350,
+	"name" : "BASIC_ODDS",
+	"pot" : 800,
 	"raise" : 100,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 100,
-	"chips" : 2250,
+	"chips" : 2800,
 	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
+	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 100,
-	"chips" : 3050,
+	"chips" : 2500,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
-	"pot" : 1450,
+	"pot" : 900,
 	"raise" : 200,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 100,
-	"chips" : 2950,
+	"bet" : 200,
+	"chips" : 2300,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 2800,
+	"current_bet" : 100,
+	"name" : "BASIC_ODDS",
+	"pot" : 1100,
+	"raise" : 300,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 2600,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 300,
+	"chips" : 2300,
+	"current_bet" : 200,
+	"name" : "RANDOM3",
+	"pot" : 1300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 2200,
 	"move" : "CALL",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
@@ -884,12 +924,1042 @@
 	"players" : 
 	[
 		{
-			"hand" : "Jh Jd Qh Qs Kd",
-			"name" : "RANDOM3",
-			"winnings" : 1550
+			"hand" : "8c 9d Th Ts Kc",
+			"name" : "BASIC_ODDS",
+			"winnings" : 1400
 		},
 		{
-			"hand" : "5h 5s Jh Jd Qs",
+			"hand" : "7h 9s 9d Ts Kc",
+			"name" : "RANDOM3",
+			"winnings" : 0
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 2200,
+			"hand" : "|Qs 2d|0",
+			"name" : "RANDOM3"
+		},
+		{
+			"chips" : 3000,
+			"hand" : "|7h 5c|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 2200,
+			"hand" : "|Jc Kc|0",
+			"name" : "RANDOM0"
+		},
+		{
+			"chips" : 3600,
+			"hand" : "|5h 8c|0",
+			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 4000,
+			"hand" : "|Ah Ts|1",
+			"name" : "BASIC_ODDS"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 50,
+	"chips" : 2150,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2900,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 100,
+	"chips" : 2200,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 150,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2100,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 3600,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 250,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3600,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 4000,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 250,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 3900,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2150,
+	"current_bet" : 50,
+	"name" : "RANDOM3",
+	"pot" : 350,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 2100,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 2900,
+	"current_bet" : 100,
+	"name" : "RANDOM1",
+	"pot" : 400,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 2800,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 2100,
+	"current_bet" : 100,
+	"name" : "RANDOM0",
+	"pot" : 500,
+	"raise" : 300,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 1900,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 300,
+	"chips" : 3900,
+	"current_bet" : 100,
+	"name" : "BASIC_ODDS",
+	"pot" : 700,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 3700,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 300,
+	"chips" : 2100,
+	"current_bet" : 100,
+	"name" : "RANDOM3",
+	"pot" : 900,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 300,
+	"chips" : 1900,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 300,
+	"chips" : 2800,
+	"current_bet" : 200,
+	"name" : "RANDOM1",
+	"pot" : 1100,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2800,
+	"move" : "FOLD",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"3s",
+		"Td",
+		"2h"
+	],
+	"pot" : 1100,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1900,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1100,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1900,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 1900,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1100,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1900,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 3700,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1100,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 3600,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1900,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1200,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1800,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1900,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1300,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1800,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"3s",
+		"Td",
+		"2h",
+		"6h"
+	],
+	"pot" : 1400,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1800,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1400,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1800,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 1800,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1400,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1800,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 3600,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1400,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 3500,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1800,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1500,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1700,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1800,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1600,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1700,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"3s",
+		"Td",
+		"2h",
+		"6h",
+		"4h"
+	],
+	"pot" : 1700,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1700,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1700,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1700,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 1700,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1700,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1700,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 3500,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1700,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 3400,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1700,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 1800,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1600,
+	"move" : "CALL",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1700,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1900,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1600,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "4h 6h Ts Td Ah",
+			"name" : "BASIC_ODDS",
+			"winnings" : 2000
+		},
+		{
+			"hand" : "2d 2h 6h Td Qs",
+			"name" : "RANDOM3",
+			"winnings" : 0
+		},
+		{
+			"hand" : "4h 6h Td Jc Kc",
+			"name" : "RANDOM0",
+			"winnings" : 0
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 2800,
+			"hand" : "|7d 3c|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 1600,
+			"hand" : "|Kd Ad|0",
+			"name" : "RANDOM0"
+		},
+		{
+			"chips" : 3600,
+			"hand" : "|Jc 7c|0",
+			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 5400,
+			"hand" : "|8h 2d|0",
+			"name" : "BASIC_ODDS"
+		},
+		{
+			"chips" : 1600,
+			"hand" : "|6s 9c|1",
+			"name" : "RANDOM3"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 50,
+	"chips" : 2750,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1500,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 100,
+	"chips" : 3600,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 150,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3600,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 5400,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 150,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 5400,
+	"move" : "FOLD",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 100,
+	"chips" : 1600,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 150,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1400,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 2750,
+	"current_bet" : 50,
+	"name" : "RANDOM1",
+	"pot" : 350,
+	"raise" : 300,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2750,
+	"move" : "FOLD",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1500,
+	"current_bet" : 100,
+	"name" : "RANDOM0",
+	"pot" : 350,
+	"raise" : 300,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1400,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"8s",
+		"Tc",
+		"5s"
+	],
+	"pot" : 450,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1400,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 450,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1400,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 1400,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 450,
+	"raise" : 100,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1400,
+	"move" : "FOLD",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"8s",
+		"Tc",
+		"5s",
+		"Ah"
+	],
+	"pot" : 450,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"8s",
+		"Tc",
+		"5s",
+		"Ah",
+		"9d"
+	],
+	"pot" : 450,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "9d Tc Kd Ad Ah",
+			"name" : "RANDOM0",
+			"winnings" : 450
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 1850,
+			"hand" : "|Kh 6c|0",
+			"name" : "RANDOM0"
+		},
+		{
+			"chips" : 3600,
+			"hand" : "|6s Jd|0",
+			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 5400,
+			"hand" : "|Ad Qd|0",
+			"name" : "BASIC_ODDS"
+		},
+		{
+			"chips" : 1400,
+			"hand" : "|9d 8h|0",
+			"name" : "RANDOM3"
+		},
+		{
+			"chips" : 2750,
+			"hand" : "|4c Ac|1",
+			"name" : "RANDOM1"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1750,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 200,
+	"chips" : 3400,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 200,
+	"chips" : 5400,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 5200,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1400,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 500,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1400,
+	"move" : "FOLD",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 2750,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 500,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 2350,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 1750,
+	"current_bet" : 100,
+	"name" : "RANDOM0",
+	"pot" : 900,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 1450,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 3400,
+	"current_bet" : 200,
+	"name" : "RANDOM2",
+	"pot" : 1200,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3400,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 5200,
+	"current_bet" : 200,
+	"name" : "BASIC_ODDS",
+	"pot" : 1200,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 5000,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"4s",
+		"5d",
+		"Ah"
+	],
+	"pot" : 1400,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1450,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1400,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1250,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 5000,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1600,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 4600,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 2350,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 2000,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 1950,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 1250,
+	"current_bet" : 200,
+	"name" : "RANDOM0",
+	"pot" : 2400,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 1050,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"4s",
+		"5d",
+		"Ah",
+		"5h"
+	],
+	"pot" : 2600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 1050,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 2600,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1050,
+	"move" : "FOLD",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 4600,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 2600,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 4400,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1950,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 2800,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1750,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"4s",
+		"5d",
+		"Ah",
+		"5h",
+		"7s"
+	],
+	"pot" : 3000,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 4400,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 3000,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 4200,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1750,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 3200,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1550,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "5h 5d Qd Ad Ah",
+			"name" : "BASIC_ODDS",
+			"winnings" : 3400
+		},
+		{
+			"hand" : "5h 5d 7s Ac Ah",
 			"name" : "RANDOM1",
 			"winnings" : 0
 		}
@@ -903,576 +1973,28 @@
 	"players" : 
 	[
 		{
-			"chips" : 4500,
-			"hand" : "|7c Tc|0",
-			"name" : "RANDOM3"
-		},
-		{
-			"chips" : 2800,
-			"hand" : "|Qd 7h|0",
-			"name" : "RANDOM0"
-		},
-		{
-			"chips" : 2250,
-			"hand" : "|3h 6h|0",
-			"name" : "RANDOM1"
-		},
-		{
-			"chips" : 2550,
-			"hand" : "|6s Jc|0",
+			"chips" : 3400,
+			"hand" : "|As Kd|0",
 			"name" : "RANDOM2"
 		},
 		{
-			"chips" : 2900,
-			"hand" : "|Ks 5s|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 50,
-	"chips" : 4450,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2700,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM0",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 100,
-	"chips" : 2250,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 150,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2250,
-	"move" : "FOLD",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2550,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 150,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2450,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 250,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2900,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 4450,
-	"current_bet" : 50,
-	"name" : "RANDOM3",
-	"pot" : 250,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 4450,
-	"move" : "FOLD",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2700,
-	"current_bet" : 100,
-	"name" : "RANDOM0",
-	"pot" : 250,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2700,
-	"move" : "FOLD",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Ts",
-		"2h",
-		"2s"
-	],
-	"pot" : 250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Ts",
-		"2h",
-		"2s",
-		"4s"
-	],
-	"pot" : 250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Ts",
-		"2h",
-		"2s",
-		"4s",
-		"3s"
-	],
-	"pot" : 250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "2s 3s 4s 6s Ts",
-			"name" : "RANDOM2",
-			"winnings" : 250
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 2700,
-			"hand" : "|Qh 7s|0",
-			"name" : "RANDOM0"
-		},
-		{
-			"chips" : 2250,
-			"hand" : "|5c Ts|0",
-			"name" : "RANDOM1"
-		},
-		{
-			"chips" : 2700,
-			"hand" : "|8d 8s|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 2900,
-			"hand" : "|4c Kh|0",
+			"chips" : 7600,
+			"hand" : "|3d 2d|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
-			"chips" : 4450,
-			"hand" : "|7d 9c|1",
-			"name" : "RANDOM3"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 50,
-	"chips" : 2650,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM0",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2150,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 100,
-	"chips" : 2700,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 150,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2900,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 250,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2800,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 4450,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 350,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 4350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2650,
-	"current_bet" : 50,
-	"name" : "RANDOM0",
-	"pot" : 450,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2150,
-	"current_bet" : 100,
-	"name" : "RANDOM1",
-	"pot" : 500,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2150,
-	"move" : "FOLD",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"6d",
-		"Ah",
-		"2s"
-	],
-	"pot" : 500,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2800,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2800,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 4350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 4350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"6d",
-		"Ah",
-		"2s",
-		"3c"
-	],
-	"pot" : 500,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 500,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2500,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2800,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 600,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2800,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 4350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 600,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 4250,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 700,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2500,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"6d",
-		"Ah",
-		"2s",
-		"3c",
-		"6s"
-	],
-	"pot" : 800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2500,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 800,
-	"raise" : 100,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2400,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 2500,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 2400,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 100,
-	"chips" : 4250,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1000,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 100,
-	"chips" : 4150,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "6s 6d 8s 8d Ah",
-			"name" : "RANDOM2",
-			"winnings" : 1100
-		},
-		{
-			"hand" : "6s 6d 7s Qh Ah",
-			"name" : "RANDOM0",
-			"winnings" : 0
-		},
-		{
-			"hand" : "6s 6d 7d 9c Ah",
-			"name" : "RANDOM3",
-			"winnings" : 0
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 2150,
-			"hand" : "|Js Kc|0",
-			"name" : "RANDOM1"
-		},
-		{
-			"chips" : 3500,
-			"hand" : "|6s 6h|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 2800,
-			"hand" : "|Qh 5d|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 4150,
-			"hand" : "|Qd 9h|0",
+			"chips" : 1400,
+			"hand" : "|4s 7s|0",
 			"name" : "RANDOM3"
 		},
 		{
-			"chips" : 2400,
-			"hand" : "|9s Qc|1",
+			"chips" : 1550,
+			"hand" : "|Ah 5s|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 1050,
+			"hand" : "|Ts 2s|1",
 			"name" : "RANDOM0"
 		}
 	],
@@ -1481,37 +2003,21 @@
 } ,
 {
 	"bet" : 100,
-	"chips" : 2050,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 200,
 	"chips" : 3300,
 	"move" : "RAISE_TO",
 	"name" : "RANDOM2",
 	"type" : "BLIND"
 } ,
 {
-	"call" : 200,
-	"chips" : 2800,
-	"current_bet" : 0,
+	"bet" : 200,
+	"chips" : 7400,
+	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
-	"pot" : 300,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2800,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
+	"type" : "BLIND"
 } ,
 {
 	"call" : 200,
-	"chips" : 4150,
+	"chips" : 1400,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
 	"pot" : 300,
@@ -1520,14 +2026,30 @@
 } ,
 {
 	"bet" : 0,
-	"chips" : 4150,
+	"chips" : 1400,
 	"move" : "FOLD",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 200,
-	"chips" : 2400,
+	"chips" : 1550,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1550,
+	"move" : "FOLD",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1050,
 	"current_bet" : 0,
 	"name" : "RANDOM0",
 	"pot" : 300,
@@ -1535,34 +2057,712 @@
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 2400,
-	"move" : "FOLD",
+	"bet" : 200,
+	"chips" : 850,
+	"move" : "CALL",
 	"name" : "RANDOM0",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 200,
-	"chips" : 2050,
+	"chips" : 3300,
 	"current_bet" : 100,
+	"name" : "RANDOM2",
+	"pot" : 500,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 3200,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 7400,
+	"current_bet" : 200,
+	"name" : "BASIC_ODDS",
+	"pot" : 600,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 7400,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"2h",
+		"9h",
+		"Jh"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 3200,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 600,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 3000,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 7400,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 800,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 7200,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 850,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1000,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 650,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"2h",
+		"9h",
+		"Jh",
+		"4c"
+	],
+	"pot" : 1200,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 3000,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1200,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3000,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 7200,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1200,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 7000,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 650,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 1400,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 450,
+	"move" : "CALL",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 3000,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1600,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 2800,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"2h",
+		"9h",
+		"Jh",
+		"4c",
+		"Ad"
+	],
+	"pot" : 1800,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 2800,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1800,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 2800,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 7000,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1800,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 6800,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 450,
+	"current_bet" : 0,
+	"name" : "RANDOM0",
+	"pot" : 2000,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 50,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 2800,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 2400,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 2400,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 6800,
+	"current_bet" : 200,
+	"name" : "BASIC_ODDS",
+	"pot" : 2800,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 600,
+	"chips" : 6400,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 600,
+	"chips" : 50,
+	"current_bet" : 400,
+	"name" : "RANDOM0",
+	"pot" : 3200,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 450,
+	"chips" : 0,
+	"move" : "ALL_IN",
+	"name" : "RANDOM0",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 600,
+	"chips" : 2400,
+	"current_bet" : 400,
+	"name" : "RANDOM2",
+	"pot" : 3250,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 600,
+	"chips" : 2200,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "9h Jh Kd As Ad",
+			"name" : "RANDOM2",
+			"winnings" : 3450
+		},
+		{
+			"hand" : "2s 2h Ts Jh Ad",
+			"name" : "RANDOM0",
+			"winnings" : 0
+		},
+		{
+			"hand" : "2d 2h 9h Jh Ad",
+			"name" : "BASIC_ODDS",
+			"winnings" : 0
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"names" : 
+	[
+		"RANDOM0"
+	],
+	"type" : "BROKE"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 6400,
+			"hand" : "|8c Kd|0",
+			"name" : "BASIC_ODDS"
+		},
+		{
+			"chips" : 1400,
+			"hand" : "|7c 9h|0",
+			"name" : "RANDOM3"
+		},
+		{
+			"chips" : 1550,
+			"hand" : "|5h Qd|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 5650,
+			"hand" : "|3h 9d|1",
+			"name" : "RANDOM2"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 100,
+	"chips" : 6300,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 200,
+	"chips" : 1200,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 200,
+	"chips" : 1550,
+	"current_bet" : 0,
 	"name" : "RANDOM1",
 	"pot" : 300,
 	"raise" : 400,
 	"type" : "MOVE_REQUEST"
 } ,
 {
+	"bet" : 200,
+	"chips" : 1350,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 5650,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 500,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 5250,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 6300,
+	"current_bet" : 100,
+	"name" : "BASIC_ODDS",
+	"pot" : 900,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 6000,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 1200,
+	"current_bet" : 200,
+	"name" : "RANDOM3",
+	"pot" : 1200,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
 	"bet" : 0,
-	"chips" : 2050,
+	"chips" : 1200,
 	"move" : "FOLD",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 1350,
+	"current_bet" : 200,
+	"name" : "RANDOM1",
+	"pot" : 1200,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 1150,
+	"move" : "CALL",
 	"name" : "RANDOM1",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
+		"Jh",
+		"4d",
+		"Js"
+	],
+	"pot" : 1400,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 6000,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1400,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 5800,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1150,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 1600,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 950,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 5250,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1800,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 5250,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Jh",
+		"4d",
+		"Js",
+		"7h"
+	],
+	"pot" : 1800,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 5800,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1800,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 5600,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 950,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 2000,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 750,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Jh",
+		"4d",
+		"Js",
 		"7h",
-		"7c",
-		"Qs"
+		"Ad"
+	],
+	"pot" : 2200,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 5600,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 2200,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 5400,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 750,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 2400,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 550,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "8c Js Jh Kd Ad",
+			"name" : "BASIC_ODDS",
+			"winnings" : 2600
+		},
+		{
+			"hand" : "7h Js Jh Qd Ad",
+			"name" : "RANDOM1",
+			"winnings" : 0
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 1200,
+			"hand" : "|6d 4s|0",
+			"name" : "RANDOM3"
+		},
+		{
+			"chips" : 550,
+			"hand" : "|Td Jh|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 5250,
+			"hand" : "|Jc Ac|0",
+			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 8000,
+			"hand" : "|Qc 3s|1",
+			"name" : "BASIC_ODDS"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 100,
+	"chips" : 1100,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 200,
+	"chips" : 350,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 200,
+	"chips" : 5250,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 5250,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 8000,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 8000,
+	"move" : "FOLD",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 1100,
+	"current_bet" : 100,
+	"name" : "RANDOM3",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 1100,
+	"move" : "FOLD",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Jd",
+		"2c",
+		"2h"
 	],
 	"pot" : 300,
 	"type" : "DEALT_BOARD"
@@ -1570,10 +2770,10 @@
 {
 	"cards" : 
 	[
-		"7h",
-		"7c",
-		"Qs",
-		"6c"
+		"Jd",
+		"2c",
+		"2h",
+		"Th"
 	],
 	"pot" : 300,
 	"type" : "DEALT_BOARD"
@@ -1581,11 +2781,11 @@
 {
 	"cards" : 
 	[
-		"7h",
-		"7c",
-		"Qs",
-		"6c",
-		"2c"
+		"Jd",
+		"2c",
+		"2h",
+		"Th",
+		"6s"
 	],
 	"pot" : 300,
 	"type" : "DEALT_BOARD"
@@ -1594,8 +2794,8 @@
 	"players" : 
 	[
 		{
-			"hand" : "6h 6s 6c 7c 7h",
-			"name" : "RANDOM2",
+			"hand" : "6s Td Th Jh Jd",
+			"name" : "RANDOM1",
 			"winnings" : 300
 		}
 	],
@@ -1608,29 +2808,24 @@
 	"players" : 
 	[
 		{
-			"chips" : 3600,
-			"hand" : "|2s 3c|0",
+			"chips" : 650,
+			"hand" : "|9c Kh|0",
+			"name" : "RANDOM1"
+		},
+		{
+			"chips" : 5250,
+			"hand" : "|5d 6h|0",
 			"name" : "RANDOM2"
 		},
 		{
-			"chips" : 2800,
-			"hand" : "|9c Qs|0",
+			"chips" : 8000,
+			"hand" : "|Th 2c|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
-			"chips" : 4150,
-			"hand" : "|7d Js|0",
+			"chips" : 1100,
+			"hand" : "|2d 9d|1",
 			"name" : "RANDOM3"
-		},
-		{
-			"chips" : 2400,
-			"hand" : "|3s 3h|0",
-			"name" : "RANDOM0"
-		},
-		{
-			"chips" : 2050,
-			"hand" : "|Jh Td|1",
-			"name" : "RANDOM1"
 		}
 	],
 	"pot" : 0,
@@ -1638,21 +2833,37 @@
 } ,
 {
 	"bet" : 100,
-	"chips" : 3500,
+	"chips" : 550,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 200,
+	"chips" : 5050,
 	"move" : "RAISE_TO",
 	"name" : "RANDOM2",
 	"type" : "BLIND"
 } ,
 {
-	"bet" : 200,
-	"chips" : 2600,
-	"move" : "RAISE_TO",
+	"call" : 200,
+	"chips" : 8000,
+	"current_bet" : 0,
 	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 8000,
+	"move" : "FOLD",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
 } ,
 {
 	"call" : 200,
-	"chips" : 4150,
+	"chips" : 1100,
 	"current_bet" : 0,
 	"name" : "RANDOM3",
 	"pot" : 300,
@@ -1660,72 +2871,240 @@
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 200,
-	"chips" : 3950,
-	"move" : "CALL",
+	"bet" : 0,
+	"chips" : 1100,
+	"move" : "FOLD",
 	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 200,
-	"chips" : 2400,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 500,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 2200,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 2050,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 700,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1850,
-	"move" : "CALL",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3500,
+	"chips" : 550,
 	"current_bet" : 100,
+	"name" : "RANDOM1",
+	"pot" : 300,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 450,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 5050,
+	"current_bet" : 200,
 	"name" : "RANDOM2",
-	"pot" : 900,
+	"pot" : 400,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 4850,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 400,
+	"chips" : 450,
+	"current_bet" : 200,
+	"name" : "RANDOM1",
+	"pot" : 600,
+	"raise" : 600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
+	"chips" : 250,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Js",
+		"9s",
+		"Ac"
+	],
+	"pot" : 800,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 250,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 800,
+	"raise" : 200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 200,
+	"chips" : 50,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 200,
+	"chips" : 4850,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1000,
 	"raise" : 400,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 0,
-	"chips" : 3500,
+	"chips" : 4850,
 	"move" : "FOLD",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
-	"call" : 200,
-	"chips" : 2600,
-	"current_bet" : 200,
-	"name" : "BASIC_ODDS",
-	"pot" : 900,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
+	"cards" : 
+	[
+		"Js",
+		"9s",
+		"Ac",
+		"6d"
+	],
+	"pot" : 1000,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Js",
+		"9s",
+		"Ac",
+		"6d",
+		"Ks"
+	],
+	"pot" : 1000,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "9c 9s Kh Ks Ac",
+			"name" : "RANDOM1",
+			"winnings" : 1000
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 4850,
+			"hand" : "|Kc 3c|0",
+			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 8000,
+			"hand" : "|4h Ad|0",
+			"name" : "BASIC_ODDS"
+		},
+		{
+			"chips" : 1100,
+			"hand" : "|8d 3d|0",
+			"name" : "RANDOM3"
+		},
+		{
+			"chips" : 1050,
+			"hand" : "|5c Qd|1",
+			"name" : "RANDOM1"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
 } ,
 {
 	"bet" : 200,
-	"chips" : 2600,
+	"chips" : 4650,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 400,
+	"chips" : 7600,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 400,
+	"chips" : 1100,
+	"current_bet" : 0,
+	"name" : "RANDOM3",
+	"pot" : 600,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 300,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM3",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 800,
+	"chips" : 1050,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 1400,
+	"raise" : 1200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 250,
+	"move" : "CALL",
+	"name" : "RANDOM1",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 800,
+	"chips" : 4650,
+	"current_bet" : 200,
+	"name" : "RANDOM2",
+	"pot" : 2200,
+	"raise" : 1200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 4650,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 800,
+	"chips" : 7600,
+	"current_bet" : 400,
+	"name" : "BASIC_ODDS",
+	"pot" : 2200,
+	"raise" : 1200,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 7200,
 	"move" : "CALL",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
@@ -1733,504 +3112,94 @@
 {
 	"cards" : 
 	[
-		"7c",
-		"Ks",
-		"Ah"
+		"Th",
+		"Td",
+		"2c"
 	],
-	"pot" : 900,
+	"pot" : 2600,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"call" : 0,
-	"chips" : 2600,
+	"chips" : 7200,
 	"current_bet" : 0,
 	"name" : "BASIC_ODDS",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2600,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 3950,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3950,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 2200,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2200,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 1850,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 1850,
-	"move" : "CALL",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"7c",
-		"Ks",
-		"Ah",
-		"9d"
-	],
-	"pot" : 900,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2600,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 900,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 2400,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3950,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1100,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 3750,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 2200,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 1300,
+	"pot" : 2600,
 	"raise" : 400,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 400,
-	"chips" : 1800,
+	"chips" : 6800,
 	"move" : "RAISE_TO",
-	"name" : "RANDOM0",
+	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 400,
-	"chips" : 1850,
+	"chips" : 300,
 	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 1700,
-	"raise" : 600,
+	"name" : "RANDOM3",
+	"pot" : 3000,
+	"raise" : 800,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 400,
-	"chips" : 1450,
-	"move" : "CALL",
-	"name" : "RANDOM1",
+	"bet" : 0,
+	"chips" : 300,
+	"move" : "FOLD",
+	"name" : "RANDOM3",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 400,
-	"chips" : 2400,
-	"current_bet" : 200,
-	"name" : "BASIC_ODDS",
-	"pot" : 2100,
-	"raise" : 600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 600,
-	"chips" : 2000,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 600,
-	"chips" : 3750,
-	"current_bet" : 200,
-	"name" : "RANDOM3",
-	"pot" : 2500,
+	"chips" : 250,
+	"current_bet" : 0,
+	"name" : "RANDOM1",
+	"pot" : 3000,
 	"raise" : 800,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 600,
-	"chips" : 3350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 600,
-	"chips" : 1800,
-	"current_bet" : 400,
-	"name" : "RANDOM0",
-	"pot" : 2900,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 600,
-	"chips" : 1600,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 600,
-	"chips" : 1450,
-	"current_bet" : 400,
-	"name" : "RANDOM1",
-	"pot" : 3100,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 600,
-	"chips" : 1250,
-	"move" : "CALL",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"7c",
-		"Ks",
-		"Ah",
-		"9d",
-		"6s"
-	],
-	"pot" : 3300,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2000,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 3300,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1800,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 3500,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 3150,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 1600,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 3700,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1400,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 1250,
-	"current_bet" : 0,
-	"name" : "RANDOM1",
-	"pot" : 3900,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 850,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 1800,
-	"current_bet" : 200,
-	"name" : "BASIC_ODDS",
-	"pot" : 4300,
-	"raise" : 600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 600,
-	"chips" : 1400,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 600,
-	"chips" : 3150,
-	"current_bet" : 200,
-	"name" : "RANDOM3",
-	"pot" : 4700,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 800,
-	"chips" : 2550,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 800,
-	"chips" : 1400,
-	"current_bet" : 200,
-	"name" : "RANDOM0",
-	"pot" : 5300,
-	"raise" : 1000,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 800,
-	"chips" : 800,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 800,
-	"chips" : 850,
-	"current_bet" : 400,
-	"name" : "RANDOM1",
-	"pot" : 5900,
-	"raise" : 1000,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 800,
-	"chips" : 450,
-	"move" : "CALL",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 800,
-	"chips" : 1400,
-	"current_bet" : 600,
-	"name" : "BASIC_ODDS",
-	"pot" : 6300,
-	"raise" : 1000,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1000,
-	"chips" : 1000,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1000,
-	"chips" : 2550,
-	"current_bet" : 800,
-	"name" : "RANDOM3",
-	"pot" : 6700,
-	"raise" : 1200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1000,
-	"chips" : 2350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1000,
-	"chips" : 800,
-	"current_bet" : 800,
-	"name" : "RANDOM0",
-	"pot" : 6900,
-	"raise" : 1200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1000,
-	"chips" : 600,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1000,
-	"chips" : 450,
-	"current_bet" : 800,
-	"name" : "RANDOM1",
-	"pot" : 7100,
-	"raise" : 1200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1200,
-	"chips" : 50,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM1",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1200,
-	"chips" : 1000,
-	"current_bet" : 1000,
-	"name" : "BASIC_ODDS",
-	"pot" : 7500,
-	"raise" : 1400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1400,
-	"chips" : 600,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1400,
-	"chips" : 2350,
-	"current_bet" : 1000,
-	"name" : "RANDOM3",
-	"pot" : 7900,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1400,
-	"chips" : 1950,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1400,
-	"chips" : 600,
-	"current_bet" : 1000,
-	"name" : "RANDOM0",
-	"pot" : 8300,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1400,
-	"chips" : 200,
-	"move" : "CALL",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 1400,
-	"chips" : 50,
-	"current_bet" : 1200,
-	"name" : "RANDOM1",
-	"pot" : 8700,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1250,
+	"bet" : 250,
 	"chips" : 0,
 	"move" : "ALL_IN",
 	"name" : "RANDOM1",
 	"type" : "MOVE"
 } ,
 {
+	"cards" : 
+	[
+		"Th",
+		"Td",
+		"2c",
+		"4s"
+	],
+	"pot" : 3250,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Th",
+		"Td",
+		"2c",
+		"4s",
+		"Jc"
+	],
+	"pot" : 3250,
+	"type" : "DEALT_BOARD"
+} ,
+{
 	"players" : 
 	[
 		{
-			"hand" : "9c 9d Qs Ks Ah",
+			"hand" : "4h 4s Td Th Ad",
 			"name" : "BASIC_ODDS",
-			"winnings" : 8750
+			"winnings" : 3250
 		},
 		{
-			"hand" : "7d 7c Js Ks Ah",
-			"name" : "RANDOM3",
-			"winnings" : 0
-		},
-		{
-			"hand" : "3h 3s 9d Ks Ah",
-			"name" : "RANDOM0",
-			"winnings" : 0
-		},
-		{
-			"hand" : "9d Td Jh Ks Ah",
+			"hand" : "5c Td Th Jc Qd",
 			"name" : "RANDOM1",
 			"winnings" : 0
 		}
@@ -2251,23 +3220,18 @@
 	"players" : 
 	[
 		{
-			"chips" : 9350,
-			"hand" : "|5c 7c|0",
+			"chips" : 10050,
+			"hand" : "|7d 5h|0",
 			"name" : "BASIC_ODDS"
 		},
 		{
-			"chips" : 1950,
-			"hand" : "|2d Jc|0",
+			"chips" : 300,
+			"hand" : "|Td Ad|0",
 			"name" : "RANDOM3"
 		},
 		{
-			"chips" : 200,
-			"hand" : "|6c 8c|0",
-			"name" : "RANDOM0"
-		},
-		{
-			"chips" : 3500,
-			"hand" : "|9s Td|1",
+			"chips" : 4650,
+			"hand" : "|9d 4d|1",
 			"name" : "RANDOM2"
 		}
 	],
@@ -2275,131 +3239,56 @@
 	"type" : "DEALT_HANDS"
 } ,
 {
-	"bet" : 100,
-	"chips" : 9250,
+	"bet" : 200,
+	"chips" : 9850,
 	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
 	"type" : "BLIND"
 } ,
 {
-	"bet" : 200,
-	"chips" : 1750,
-	"move" : "RAISE_TO",
+	"bet" : 300,
+	"chips" : 0,
+	"move" : "ALL_IN",
 	"name" : "RANDOM3",
 	"type" : "BLIND"
 } ,
 {
-	"call" : 200,
-	"chips" : 200,
-	"current_bet" : 0,
-	"name" : "RANDOM0",
-	"pot" : 300,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 0,
-	"move" : "ALL_IN",
-	"name" : "RANDOM0",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3500,
+	"call" : 400,
+	"chips" : 4650,
 	"current_bet" : 0,
 	"name" : "RANDOM2",
 	"pot" : 500,
-	"raise" : 400,
+	"raise" : 800,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 200,
-	"chips" : 3300,
+	"bet" : 400,
+	"chips" : 4250,
 	"move" : "CALL",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
-	"call" : 200,
-	"chips" : 9250,
-	"current_bet" : 100,
-	"name" : "BASIC_ODDS",
-	"pot" : 700,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 9250,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 1750,
+	"call" : 400,
+	"chips" : 9850,
 	"current_bet" : 200,
-	"name" : "RANDOM3",
-	"pot" : 700,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1750,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Tc",
-		"4d",
-		"4h"
-	],
-	"pot" : 700,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 1750,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 700,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1550,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3300,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
+	"name" : "BASIC_ODDS",
 	"pot" : 900,
-	"raise" : 400,
+	"raise" : 800,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 200,
-	"chips" : 3100,
+	"bet" : 400,
+	"chips" : 9650,
 	"move" : "CALL",
-	"name" : "RANDOM2",
+	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"Tc",
-		"4d",
-		"4h",
+		"6d",
+		"4c",
 		"Js"
 	],
 	"pot" : 1100,
@@ -2407,1040 +3296,139 @@
 } ,
 {
 	"call" : 0,
-	"chips" : 1550,
+	"chips" : 9650,
 	"current_bet" : 0,
-	"name" : "RANDOM3",
+	"name" : "BASIC_ODDS",
 	"pot" : 1100,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 1550,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 3100,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1100,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 2900,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 1550,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1300,
 	"raise" : 400,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 0,
-	"chips" : 1550,
-	"move" : "FOLD",
-	"name" : "RANDOM3",
+	"chips" : 9650,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 0,
+	"chips" : 4250,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1100,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 4250,
+	"move" : "CALL",
+	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"Tc",
-		"4d",
-		"4h",
+		"6d",
+		"4c",
 		"Js",
-		"Ad"
+		"Th"
 	],
-	"pot" : 1300,
+	"pot" : 1100,
 	"type" : "DEALT_BOARD"
 } ,
 {
-	"players" : 
-	[
-		{
-			"hand" : "4h 4d Td Tc Ad",
-			"name" : "RANDOM2",
-			"winnings" : 1300
-		},
-		{
-			"hand" : "4h 4d Tc Js Ad",
-			"name" : "RANDOM0",
-			"winnings" : 0
-		}
-	],
-	"type" : "RESULTS"
+	"call" : 0,
+	"chips" : 9650,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1100,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
 } ,
 {
-	"names" : 
-	[
-		"RANDOM0"
-	],
-	"type" : "BROKE"
+	"bet" : 0,
+	"chips" : 9650,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
 } ,
 {
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 1550,
-			"hand" : "|6h 9d|0",
-			"name" : "RANDOM3"
-		},
-		{
-			"chips" : 4200,
-			"hand" : "|Jh 8c|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 9250,
-			"hand" : "|Ts Qh|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 100,
-	"chips" : 1450,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 200,
-	"chips" : 4000,
-	"move" : "RAISE_TO",
+	"call" : 0,
+	"chips" : 4250,
+	"current_bet" : 0,
 	"name" : "RANDOM2",
-	"type" : "BLIND"
+	"pot" : 1100,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
 } ,
 {
-	"call" : 200,
+	"bet" : 0,
+	"chips" : 4250,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"6d",
+		"4c",
+		"Js",
+		"Th",
+		"3c"
+	],
+	"pot" : 1100,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 9650,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1100,
+	"raise" : 400,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 400,
 	"chips" : 9250,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 300,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 9050,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 1450,
-	"current_bet" : 100,
-	"name" : "RANDOM3",
-	"pot" : 500,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 4000,
-	"current_bet" : 200,
-	"name" : "RANDOM2",
-	"pot" : 600,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 4000,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9c",
-		"Tc",
-		"6d"
-	],
-	"pot" : 600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 1350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 600,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 1150,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 4000,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 800,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 4000,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 9050,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 800,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 8650,
 	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 400,
-	"chips" : 1150,
-	"current_bet" : 200,
-	"name" : "RANDOM3",
-	"pot" : 1200,
-	"raise" : 600,
+	"chips" : 4250,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 1500,
+	"raise" : 800,
 	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 400,
-	"chips" : 950,
+	"chips" : 3850,
 	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9c",
-		"Tc",
-		"6d",
-		"Ks"
-	],
-	"pot" : 1400,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 950,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1400,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 950,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 8650,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 1400,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 8450,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 950,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1600,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 750,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9c",
-		"Tc",
-		"6d",
-		"Ks",
-		"Jc"
-	],
-	"pot" : 1800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 750,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1800,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 750,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 8450,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 1800,
-	"raise" : 200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 8250,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 750,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 2000,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 200,
-	"chips" : 550,
-	"move" : "CALL",
-	"name" : "RANDOM3",
+	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"players" : 
 	[
 		{
-			"hand" : "9c Tc Jc Qh Ks",
+			"hand" : "3c 4c 5h 6d 7d",
 			"name" : "BASIC_ODDS",
-			"winnings" : 2200
+			"winnings" : 1900
 		},
 		{
-			"hand" : "6h 6d 9d 9c Ks",
+			"hand" : "6d Td Th Js Ad",
 			"name" : "RANDOM3",
 			"winnings" : 0
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 4000,
-			"hand" : "|9s Th|0",
-			"name" : "RANDOM2"
 		},
 		{
-			"chips" : 10450,
-			"hand" : "|5s 4s|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 550,
-			"hand" : "|6d Td|1",
-			"name" : "RANDOM3"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 100,
-	"chips" : 3900,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 200,
-	"chips" : 10250,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 200,
-	"chips" : 550,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 300,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 550,
-	"move" : "FOLD",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 200,
-	"chips" : 3900,
-	"current_bet" : 100,
-	"name" : "RANDOM2",
-	"pot" : 300,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3900,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"3h",
-		"4c",
-		"8h"
-	],
-	"pot" : 300,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"3h",
-		"4c",
-		"8h",
-		"As"
-	],
-	"pot" : 300,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"3h",
-		"4c",
-		"8h",
-		"As",
-		"7h"
-	],
-	"pot" : 300,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "4s 4c 7h 8h As",
-			"name" : "BASIC_ODDS",
-			"winnings" : 300
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 10550,
-			"hand" : "|8c 2h|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 550,
-			"hand" : "|Ah Qs|0",
-			"name" : "RANDOM3"
-		},
-		{
-			"chips" : 3900,
-			"hand" : "|Jd 9c|1",
-			"name" : "RANDOM2"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 200,
-	"chips" : 10350,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 400,
-	"chips" : 150,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 400,
-	"chips" : 3900,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3900,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 10350,
-	"current_bet" : 200,
-	"name" : "BASIC_ODDS",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 10350,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9s",
-		"4h",
-		"4d"
-	],
-	"pot" : 600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"9s",
-		"4h",
-		"4d",
-		"Ac"
-	],
-	"pot" : 600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"9s",
-		"4h",
-		"4d",
-		"Ac",
-		"8s"
-	],
-	"pot" : 600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "4d 4h Qs Ah Ac",
-			"name" : "RANDOM3",
-			"winnings" : 600
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 750,
-			"hand" : "|5s 4s|0",
-			"name" : "RANDOM3"
-		},
-		{
-			"chips" : 3900,
-			"hand" : "|2d Ad|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 10350,
-			"hand" : "|Js Jh|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 200,
-	"chips" : 550,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM3",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 400,
-	"chips" : 3500,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 400,
-	"chips" : 10350,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9950,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 550,
-	"current_bet" : 200,
-	"name" : "RANDOM3",
-	"pot" : 1000,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 350,
-	"move" : "CALL",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 3500,
-	"current_bet" : 400,
-	"name" : "RANDOM2",
-	"pot" : 1200,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3500,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"4c",
-		"Ks",
-		"Ah"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 1200,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 350,
-	"move" : "FOLD",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"4c",
-		"Ks",
-		"Ah",
-		"Jc"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"4c",
-		"Ks",
-		"Ah",
-		"Jc",
-		"Ts"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "Jh Js Jc Ks Ah",
-			"name" : "BASIC_ODDS",
-			"winnings" : 1200
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 3500,
-			"hand" : "|Th Kc|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 11150,
-			"hand" : "|Qd Ad|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 350,
-			"hand" : "|As Qc|1",
-			"name" : "RANDOM3"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 200,
-	"chips" : 3300,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 400,
-	"chips" : 10750,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 400,
-	"chips" : 350,
-	"current_bet" : 0,
-	"name" : "RANDOM3",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 350,
-	"chips" : 0,
-	"move" : "ALL_IN",
-	"name" : "RANDOM3",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 3300,
-	"current_bet" : 200,
-	"name" : "RANDOM2",
-	"pot" : 950,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 3100,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 10750,
-	"current_bet" : 400,
-	"name" : "BASIC_ODDS",
-	"pot" : 1150,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 10750,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9h",
-		"Js",
-		"Qh"
-	],
-	"pot" : 1150,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 3100,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1150,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3100,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 10750,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 1150,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 10350,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 3100,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1550,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 2700,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9h",
-		"Js",
-		"Qh",
-		"3d"
-	],
-	"pot" : 1950,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2700,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1950,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2700,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 10350,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 1950,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9950,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 2700,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 2350,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 2300,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"9h",
-		"Js",
-		"Qh",
-		"3d",
-		"8h"
-	],
-	"pot" : 2750,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 2300,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 2750,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2300,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 9950,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 2750,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9550,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 2300,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 3150,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 1900,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "9h Th Js Qh Kc",
+			"hand" : "4d 4c 9d Th Js",
 			"name" : "RANDOM2",
-			"winnings" : 3550
-		},
-		{
-			"hand" : "9h Js Qc Qh As",
-			"name" : "RANDOM3",
-			"winnings" : 0
-		},
-		{
-			"hand" : "9h Js Qd Qh Ad",
-			"name" : "BASIC_ODDS",
 			"winnings" : 0
 		}
 	],
@@ -3460,334 +3448,213 @@
 	"players" : 
 	[
 		{
-			"chips" : 9550,
-			"hand" : "|Kh Ad|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 5450,
-			"hand" : "|7c Kc|1",
-			"name" : "RANDOM2"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 200,
-	"chips" : 9350,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 400,
-	"chips" : 5050,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 400,
-	"chips" : 9350,
-	"current_bet" : 200,
-	"name" : "BASIC_ODDS",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9150,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 5050,
-	"current_bet" : 400,
-	"name" : "RANDOM2",
-	"pot" : 800,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 5050,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"3d",
-		"2s",
-		"5c"
-	],
-	"pot" : 800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"3d",
-		"2s",
-		"5c",
-		"3h"
-	],
-	"pot" : 800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"3d",
-		"2s",
-		"5c",
-		"3h",
-		"3s"
-	],
-	"pot" : 800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "3s 3h 3d Kh Ad",
-			"name" : "BASIC_ODDS",
-			"winnings" : 800
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 5050,
-			"hand" : "|4d 4c|0",
+			"chips" : 3850,
+			"hand" : "|Js Kc|0",
 			"name" : "RANDOM2"
 		},
-		{
-			"chips" : 9950,
-			"hand" : "|3c As|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 200,
-	"chips" : 4850,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9550,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 400,
-	"chips" : 4850,
-	"current_bet" : 200,
-	"name" : "RANDOM2",
-	"pot" : 600,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 4650,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 9550,
-	"current_bet" : 400,
-	"name" : "BASIC_ODDS",
-	"pot" : 800,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9550,
-	"move" : "CALL",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Qc",
-		"7h",
-		"5h"
-	],
-	"pot" : 800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 4650,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 800,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 4650,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 0,
-	"chips" : 9550,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 800,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 9150,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 4650,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1200,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 4250,
-	"move" : "CALL",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Qc",
-		"7h",
-		"5h",
-		"8d"
-	],
-	"pot" : 1600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"call" : 0,
-	"chips" : 4250,
-	"current_bet" : 0,
-	"name" : "RANDOM2",
-	"pot" : 1600,
-	"raise" : 400,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 400,
-	"chips" : 3850,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 400,
-	"chips" : 9150,
-	"current_bet" : 0,
-	"name" : "BASIC_ODDS",
-	"pot" : 2000,
-	"raise" : 800,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 800,
-	"chips" : 8350,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"call" : 800,
-	"chips" : 3850,
-	"current_bet" : 400,
-	"name" : "RANDOM2",
-	"pot" : 2800,
-	"raise" : 1200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 3850,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Qc",
-		"7h",
-		"5h",
-		"8d",
-		"Ks"
-	],
-	"pot" : 2800,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "7h 8d Qc Ks As",
-			"name" : "BASIC_ODDS",
-			"winnings" : 2800
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
 		{
 			"chips" : 11150,
-			"hand" : "|Ah Ks|0",
+			"hand" : "|6d As|1",
+			"name" : "BASIC_ODDS"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 200,
+	"chips" : 3650,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 400,
+	"chips" : 10750,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 400,
+	"chips" : 3650,
+	"current_bet" : 200,
+	"name" : "RANDOM2",
+	"pot" : 600,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3650,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Ah",
+		"Ad",
+		"2c"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Ah",
+		"Ad",
+		"2c",
+		"Qh"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Ah",
+		"Ad",
+		"2c",
+		"Qh",
+		"3c"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "6d Qh As Ad Ah",
+			"name" : "BASIC_ODDS",
+			"winnings" : 600
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 11350,
+			"hand" : "|Jc 2h|0",
 			"name" : "BASIC_ODDS"
 		},
+		{
+			"chips" : 3650,
+			"hand" : "|4d 2s|1",
+			"name" : "RANDOM2"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 200,
+	"chips" : 11150,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 400,
+	"chips" : 3250,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 400,
+	"chips" : 11150,
+	"current_bet" : 200,
+	"name" : "BASIC_ODDS",
+	"pot" : 600,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 11150,
+	"move" : "FOLD",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"3c",
+		"Tc",
+		"Qc"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"3c",
+		"Tc",
+		"Qc",
+		"6d"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"3c",
+		"Tc",
+		"Qc",
+		"6d",
+		"3s"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "3s 3c 6d Tc Qc",
+			"name" : "RANDOM2",
+			"winnings" : 600
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
 		{
 			"chips" : 3850,
-			"hand" : "|Qd 4c|1",
+			"hand" : "|5s 4d|0",
 			"name" : "RANDOM2"
+		},
+		{
+			"chips" : 11150,
+			"hand" : "|Th 4s|1",
+			"name" : "BASIC_ODDS"
 		}
 	],
 	"pot" : 0,
 	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 200,
+	"chips" : 3650,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
 } ,
 {
 	"bet" : 400,
@@ -3797,15 +3664,102 @@
 	"type" : "BLIND"
 } ,
 {
+	"call" : 400,
+	"chips" : 3650,
+	"current_bet" : 200,
+	"name" : "RANDOM2",
+	"pot" : 600,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 0,
+	"chips" : 3650,
+	"move" : "FOLD",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Qd",
+		"Jc",
+		"Ad"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Qd",
+		"Jc",
+		"Ad",
+		"8h"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"Qd",
+		"Jc",
+		"Ad",
+		"8h",
+		"4h"
+	],
+	"pot" : 600,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"players" : 
+	[
+		{
+			"hand" : "4s 4h Jc Qd Ad",
+			"name" : "BASIC_ODDS",
+			"winnings" : 600
+		}
+	],
+	"type" : "RESULTS"
+} ,
+{
+	"type" : "PING"
+} ,
+{
+	"players" : 
+	[
+		{
+			"chips" : 11350,
+			"hand" : "|Ks Ac|0",
+			"name" : "BASIC_ODDS"
+		},
+		{
+			"chips" : 3650,
+			"hand" : "|Qc 8s|1",
+			"name" : "RANDOM2"
+		}
+	],
+	"pot" : 0,
+	"type" : "DEALT_HANDS"
+} ,
+{
+	"bet" : 400,
+	"chips" : 10950,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
 	"bet" : 800,
-	"chips" : 3050,
+	"chips" : 2850,
 	"move" : "RAISE_TO",
 	"name" : "RANDOM2",
 	"type" : "BLIND"
 } ,
 {
 	"call" : 800,
-	"chips" : 10750,
+	"chips" : 10950,
 	"current_bet" : 400,
 	"name" : "BASIC_ODDS",
 	"pot" : 1200,
@@ -3814,14 +3768,14 @@
 } ,
 {
 	"bet" : 800,
-	"chips" : 10350,
+	"chips" : 10550,
 	"move" : "CALL",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
 	"call" : 800,
-	"chips" : 3050,
+	"chips" : 2850,
 	"current_bet" : 800,
 	"name" : "RANDOM2",
 	"pot" : 1600,
@@ -3829,632 +3783,153 @@
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 3050,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"4d",
-		"7s"
-	],
-	"pot" : 1600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"4d",
-		"7s",
-		"4s"
-	],
-	"pot" : 1600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"4d",
-		"7s",
-		"4s",
-		"Jd"
-	],
-	"pot" : 1600,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "4s 4d Jd Ks Ah",
-			"name" : "BASIC_ODDS",
-			"winnings" : 1600
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 3050,
-			"hand" : "|Qc 2c|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 11950,
-			"hand" : "|9s 7d|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 400,
-	"chips" : 2650,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
 	"bet" : 800,
-	"chips" : 11150,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 800,
-	"chips" : 2650,
-	"current_bet" : 400,
-	"name" : "RANDOM2",
-	"pot" : 1200,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2650,
-	"move" : "FOLD",
+	"chips" : 2850,
+	"move" : "CALL",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"Ad",
-		"6s",
-		"6h"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Ad",
-		"6s",
-		"6h",
-		"Ks"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Ad",
-		"6s",
-		"6h",
-		"Ks",
-		"6c"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "6c 6h 6s Ks Ad",
-			"name" : "BASIC_ODDS",
-			"winnings" : 1200
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 12350,
-			"hand" : "|3c 6s|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 2650,
-			"hand" : "|Qh 3s|1",
-			"name" : "RANDOM2"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 400,
-	"chips" : 11950,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 800,
-	"chips" : 1850,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 800,
-	"chips" : 11950,
-	"current_bet" : 400,
-	"name" : "BASIC_ODDS",
-	"pot" : 1200,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 11950,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"7s",
-		"Ks",
-		"5d"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"7s",
-		"Ks",
-		"5d",
-		"Jd"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"7s",
-		"Ks",
-		"5d",
-		"Jd",
+		"Ah",
+		"8c",
 		"3h"
 	],
-	"pot" : 1200,
+	"pot" : 1600,
 	"type" : "DEALT_BOARD"
 } ,
 {
-	"players" : 
-	[
-		{
-			"hand" : "3s 3h Jd Qh Ks",
-			"name" : "RANDOM2",
-			"winnings" : 1200
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 3050,
-			"hand" : "|6s Ts|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 11950,
-			"hand" : "|8d 8c|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 400,
-	"chips" : 2650,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
+	"call" : 0,
+	"chips" : 10550,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 1600,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
 } ,
 {
 	"bet" : 800,
-	"chips" : 11150,
+	"chips" : 9750,
 	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
+	"type" : "MOVE"
 } ,
 {
 	"call" : 800,
-	"chips" : 2650,
-	"current_bet" : 400,
+	"chips" : 2850,
+	"current_bet" : 0,
 	"name" : "RANDOM2",
-	"pot" : 1200,
+	"pot" : 2400,
 	"raise" : 1600,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 2650,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"Kh",
-		"Js",
-		"Td"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Kh",
-		"Js",
-		"Td",
-		"As"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"Kh",
-		"Js",
-		"Td",
-		"As",
-		"Jd"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "8c 8d Jd Js As",
-			"name" : "BASIC_ODDS",
-			"winnings" : 1200
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 12350,
-			"hand" : "|5s 2c|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 2650,
-			"hand" : "|Js 6c|1",
-			"name" : "RANDOM2"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 400,
-	"chips" : 11950,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
 	"bet" : 800,
-	"chips" : 1850,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 800,
-	"chips" : 11950,
-	"current_bet" : 400,
-	"name" : "BASIC_ODDS",
-	"pot" : 1200,
-	"raise" : 1600,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 11950,
-	"move" : "FOLD",
-	"name" : "BASIC_ODDS",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"Qd",
-		"Tc"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"Qd",
-		"Tc",
-		"4c"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"8h",
-		"Qd",
-		"Tc",
-		"4c",
-		"Th"
-	],
-	"pot" : 1200,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "8h Th Tc Js Qd",
-			"name" : "RANDOM2",
-			"winnings" : 1200
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 3050,
-			"hand" : "|2s Jc|0",
-			"name" : "RANDOM2"
-		},
-		{
-			"chips" : 11950,
-			"hand" : "|4s 7c|1",
-			"name" : "BASIC_ODDS"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 800,
-	"chips" : 2250,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 1600,
-	"chips" : 10350,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 1600,
-	"chips" : 2250,
-	"current_bet" : 800,
-	"name" : "RANDOM2",
-	"pot" : 2400,
-	"raise" : 3200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 0,
-	"chips" : 2250,
-	"move" : "FOLD",
-	"name" : "RANDOM2",
-	"type" : "MOVE"
-} ,
-{
-	"cards" : 
-	[
-		"5c",
-		"8s",
-		"Td"
-	],
-	"pot" : 2400,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"5c",
-		"8s",
-		"Td",
-		"Ts"
-	],
-	"pot" : 2400,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"5c",
-		"8s",
-		"Td",
-		"Ts",
-		"5d"
-	],
-	"pot" : 2400,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"players" : 
-	[
-		{
-			"hand" : "5d 5c 8s Ts Td",
-			"name" : "BASIC_ODDS",
-			"winnings" : 2400
-		}
-	],
-	"type" : "RESULTS"
-} ,
-{
-	"type" : "PING"
-} ,
-{
-	"players" : 
-	[
-		{
-			"chips" : 12750,
-			"hand" : "|2c Kh|0",
-			"name" : "BASIC_ODDS"
-		},
-		{
-			"chips" : 2250,
-			"hand" : "|Td 8d|1",
-			"name" : "RANDOM2"
-		}
-	],
-	"pot" : 0,
-	"type" : "DEALT_HANDS"
-} ,
-{
-	"bet" : 800,
-	"chips" : 11950,
-	"move" : "RAISE_TO",
-	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
-} ,
-{
-	"bet" : 1600,
-	"chips" : 650,
-	"move" : "RAISE_TO",
-	"name" : "RANDOM2",
-	"type" : "BLIND"
-} ,
-{
-	"call" : 1600,
-	"chips" : 11950,
-	"current_bet" : 800,
-	"name" : "BASIC_ODDS",
-	"pot" : 2400,
-	"raise" : 3200,
-	"type" : "MOVE_REQUEST"
-} ,
-{
-	"bet" : 1600,
-	"chips" : 11150,
+	"chips" : 2050,
 	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
+} ,
+{
+	"cards" : 
+	[
+		"Ah",
+		"8c",
+		"3h",
+		"9c"
+	],
+	"pot" : 3200,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"call" : 0,
+	"chips" : 9750,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 3200,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 8950,
+	"move" : "RAISE_TO",
 	"name" : "BASIC_ODDS",
 	"type" : "MOVE"
 } ,
 {
-	"call" : 1600,
-	"chips" : 650,
-	"current_bet" : 1600,
+	"call" : 800,
+	"chips" : 2050,
+	"current_bet" : 0,
 	"name" : "RANDOM2",
-	"pot" : 3200,
-	"raise" : 3200,
+	"pot" : 4000,
+	"raise" : 1600,
 	"type" : "MOVE_REQUEST"
 } ,
 {
-	"bet" : 0,
-	"chips" : 650,
-	"move" : "FOLD",
+	"bet" : 800,
+	"chips" : 1250,
+	"move" : "CALL",
 	"name" : "RANDOM2",
 	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"2d",
-		"5d",
+		"Ah",
+		"8c",
+		"3h",
+		"9c",
 		"Tc"
 	],
-	"pot" : 3200,
+	"pot" : 4800,
 	"type" : "DEALT_BOARD"
 } ,
 {
-	"cards" : 
-	[
-		"2d",
-		"5d",
-		"Tc",
-		"5s"
-	],
-	"pot" : 3200,
-	"type" : "DEALT_BOARD"
+	"call" : 0,
+	"chips" : 8950,
+	"current_bet" : 0,
+	"name" : "BASIC_ODDS",
+	"pot" : 4800,
+	"raise" : 800,
+	"type" : "MOVE_REQUEST"
 } ,
 {
-	"cards" : 
-	[
-		"2d",
-		"5d",
-		"Tc",
-		"5s",
-		"5c"
-	],
-	"pot" : 3200,
-	"type" : "DEALT_BOARD"
+	"bet" : 800,
+	"chips" : 8150,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
+} ,
+{
+	"call" : 800,
+	"chips" : 1250,
+	"current_bet" : 0,
+	"name" : "RANDOM2",
+	"pot" : 5600,
+	"raise" : 1600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 450,
+	"move" : "CALL",
+	"name" : "RANDOM2",
+	"type" : "MOVE"
 } ,
 {
 	"players" : 
 	[
 		{
-			"hand" : "2c 2d 5c 5s 5d",
+			"hand" : "9c Tc Ks Ac Ah",
 			"name" : "BASIC_ODDS",
-			"winnings" : 3200
+			"winnings" : 6400
+		},
+		{
+			"hand" : "8s 8c Tc Qc Ah",
+			"name" : "RANDOM2",
+			"winnings" : 0
 		}
 	],
 	"type" : "RESULTS"
@@ -4466,13 +3941,13 @@
 	"players" : 
 	[
 		{
-			"chips" : 650,
-			"hand" : "|4c 3d|0",
+			"chips" : 450,
+			"hand" : "|5c 7h|0",
 			"name" : "RANDOM2"
 		},
 		{
-			"chips" : 14350,
-			"hand" : "|3c Ac|1",
+			"chips" : 14550,
+			"hand" : "|5d Qs|1",
 			"name" : "BASIC_ODDS"
 		}
 	],
@@ -4480,62 +3955,94 @@
 	"type" : "DEALT_HANDS"
 } ,
 {
-	"bet" : 650,
+	"bet" : 400,
+	"chips" : 50,
+	"move" : "RAISE_TO",
+	"name" : "RANDOM2",
+	"type" : "BLIND"
+} ,
+{
+	"bet" : 800,
+	"chips" : 13750,
+	"move" : "RAISE_TO",
+	"name" : "BASIC_ODDS",
+	"type" : "BLIND"
+} ,
+{
+	"call" : 800,
+	"chips" : 50,
+	"current_bet" : 400,
+	"name" : "RANDOM2",
+	"pot" : 1200,
+	"raise" : 1600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 450,
 	"chips" : 0,
 	"move" : "ALL_IN",
 	"name" : "RANDOM2",
-	"type" : "BLIND"
+	"type" : "MOVE"
 } ,
 {
-	"bet" : 1600,
-	"chips" : 12750,
-	"move" : "RAISE_TO",
+	"call" : 800,
+	"chips" : 13750,
+	"current_bet" : 800,
 	"name" : "BASIC_ODDS",
-	"type" : "BLIND"
+	"pot" : 1250,
+	"raise" : 1600,
+	"type" : "MOVE_REQUEST"
+} ,
+{
+	"bet" : 800,
+	"chips" : 13750,
+	"move" : "CALL",
+	"name" : "BASIC_ODDS",
+	"type" : "MOVE"
 } ,
 {
 	"cards" : 
 	[
-		"2s",
-		"9c",
+		"8d",
+		"Ah",
+		"Qc"
+	],
+	"pot" : 1250,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"8d",
+		"Ah",
+		"Qc",
+		"Jc"
+	],
+	"pot" : 1250,
+	"type" : "DEALT_BOARD"
+} ,
+{
+	"cards" : 
+	[
+		"8d",
+		"Ah",
+		"Qc",
+		"Jc",
 		"3h"
 	],
-	"pot" : 2250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"2s",
-		"9c",
-		"3h",
-		"Ah"
-	],
-	"pot" : 2250,
-	"type" : "DEALT_BOARD"
-} ,
-{
-	"cards" : 
-	[
-		"2s",
-		"9c",
-		"3h",
-		"Ah",
-		"Ks"
-	],
-	"pot" : 2250,
+	"pot" : 1250,
 	"type" : "DEALT_BOARD"
 } ,
 {
 	"players" : 
 	[
 		{
-			"hand" : "3c 3h Ks Ac Ah",
+			"hand" : "8d Jc Qs Qc Ah",
 			"name" : "BASIC_ODDS",
-			"winnings" : 2250
+			"winnings" : 1250
 		},
 		{
-			"hand" : "3d 3h 9c Ks Ah",
+			"hand" : "7h 8d Jc Qc Ah",
 			"name" : "RANDOM2",
 			"winnings" : 0
 		}
